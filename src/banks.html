@@ -1,0 +1,411 @@
+<!DOCTYPE html>
+<html lang="ru">
+	@@include('html/_head.htm',{ "title":"Банкам" })
+	<body>
+		<div class="wrapper">
+			@@include('html/_header.htm',{})
+			<main class="page banks-page">
+				<div class="page__container">
+					<div class="page__breadcrumbs breadcrumbs">
+						<ol itemscope itemtype="https://schema.org/BreadcrumbList">
+							<li
+								itemprop="itemListElement"
+								itemscope
+								itemtype="https://schema.org/ListItem"
+							>
+								<a itemprop="item" href="javascript:">
+									<span itemprop="name">Главная</span></a
+								>
+								<meta itemprop="position" content="1" />
+							</li>
+							<li
+								itemprop="itemListElement"
+								itemscope
+								itemtype="https://schema.org/ListItem"
+							>
+								<a itemprop="item" href="javascript:">
+									<span itemprop="name">Кредиты для бизнеса</span></a
+								>
+								<meta itemprop="position" content="2" />
+							</li>
+						</ol>
+					</div>
+					<h2 class="banks-page__mobtitle">Оборотный кредит</h2>
+					<div class="banks-page__promo">
+						<div class="banks-page__promo-img">
+							<img src="@img/banks-thumbnail.svg" alt="banks-thumbnail" />
+						</div>
+						<div class="banks-page__promo-body">
+							<h1 class="banks-page__promo-title">
+								Оборотный кредит Сбербанка России
+							</h1>
+							<div class="banks-page__promo-descr">
+								Кредит на любые бизнес-цели
+							</div>
+							<ul class="banks-page__promo-list">
+								<li>Без залога</li>
+								<li>Возможно кредитование без залога</li>
+								<li>Финансирование разных целей</li>
+								<li>Без скрытых комиссий</li>
+							</ul>
+							<button class="btn banks-page__promo-btn">Подать заявку</button>
+						</div>
+					</div>
+					<ul data-da=".banks-page__promo-body,767.98,2" class="banks-page__list">
+						<li class="banks-page__list-item">
+							<img src="@img/stavka.svg" alt="stavka">
+							<span>Ставка</span>
+							<span class="red">от 11%</span>
+						</li>
+						<li class="banks-page__list-item">
+							<img src="@img/srok.svg" alt="srok">
+							<span>Срок</span>
+							<span class="blue">до 3 лет</span>
+						</li>
+						<li class="banks-page__list-item">
+							<img src="@img/razmer.svg" alt="razmer">
+							<span>Сумма</span>
+							<span class="green">От 100 тыс до 5 млн ₽</span>
+						</li>
+					</ul>
+					<div class="banks-page__requirements">
+						<h2 class="banks-page__requirements-title">Условия и требования</h2>
+						<div
+							data-spollers
+							class="banks-page__requirements-spollers requirements-spollers"
+						>
+							<div class="requirements-spollers__item">
+								<button
+									type="button"
+									data-spoller
+									class="requirements-spollers__title"
+								>
+									<span>Условия</span>
+									<svg
+										width="18"
+										height="18"
+										viewBox="0 0 18 18"
+										fill="none"
+										xmlns="http://www.w3.org/2000/svg"
+									>
+										<path
+											d="M1.72761 9.75293H7.85484V15.8802C7.85484 16.5029 8.36712 17.0253 8.99993 17.0253C9.63274 17.0253 10.145 16.5029 10.145 15.8802V9.75293H16.2723C16.895 9.75293 17.4173 9.24065 17.4173 8.60784C17.4173 7.97503 16.895 7.46275 16.2723 7.46275H10.145V1.33552C10.145 0.712751 9.63274 0.19043 8.99993 0.19043C8.36712 0.19043 7.85484 0.712751 7.85484 1.33552V7.46275H1.72761C1.10484 7.46275 0.58252 7.97503 0.58252 8.60784C0.58252 9.24065 1.10484 9.75293 1.72761 9.75293Z"
+											fill="#1C1C1C"
+										/>
+									</svg>
+								</button>
+								<div class="requirements-spollers__body">
+									<table>
+										<tr>
+											<td>Сумма</td>
+											<td>От 300 тыс до 10 млн ₽</td>
+										</tr>
+										<tr>
+											<td>Срок</td>
+											<td>От 1 года до 3 лет</td>
+										</tr>
+										<tr>
+											<td>Cтавка</td>
+											<td>От 11.95%</td>
+										</tr>
+										<tr>
+											<td>Цель продукта</td>
+											<td>
+												<p>
+													Пополнение оборотных средств:<br />
+													- финансирование текущей деятельности;<br />
+													- оплата налогов;<br />
+													- выплата заработной платы;<br />
+													- оплата рекламных кампаний;<br />
+													- прочие операционные расходы.
+												</p>
+
+												<p>
+													Инвестиционные цели: <br />
+													- приобретение земельных участков;<br />
+													- приобретение жилых и нежилых зданий;<br />
+													- приобретение жилых и нежилых помещений;<br />
+													- реконструкция нежилых зданий, в т.ч. капитальный
+													ремонт;<br />
+													- приобретение, ремонт и модернизация транспортных
+													средств, оборудования, прочих основных средств.
+												</p>
+											</td>
+										</tr>
+										<tr>
+											<td>Прочие условия</td>
+											<td>
+												Ставка снижается на 1%, если у заемщика положительная
+												кредитная истории в банке. Ставка увеличивается на 1%
+												при несоответствии возраста участников сделки
+												установленным в банке требованиям. Срок кредита только
+												для пополнения оборотных средств – до 18 месяцев. Срок
+												кредита для инвестиционных или смешанных целей – до 36
+												месяцев. Порядок погашения кредита – равными частями
+												основного долга. Заемщик обязан поддерживать ежемесячный
+												оборот на расчетном счете в банке в размере не менее 25%
+												от суммы кредита.
+											</td>
+										</tr>
+									</table>
+								</div>
+							</div>
+							<div class="requirements-spollers__item">
+								<button
+									type="button"
+									data-spoller
+									class="requirements-spollers__title"
+								>
+									<span>Требования к заемщику</span>
+									<svg
+										width="18"
+										height="18"
+										viewBox="0 0 18 18"
+										fill="none"
+										xmlns="http://www.w3.org/2000/svg"
+									>
+										<path
+											d="M1.72761 9.75293H7.85484V15.8802C7.85484 16.5029 8.36712 17.0253 8.99993 17.0253C9.63274 17.0253 10.145 16.5029 10.145 15.8802V9.75293H16.2723C16.895 9.75293 17.4173 9.24065 17.4173 8.60784C17.4173 7.97503 16.895 7.46275 16.2723 7.46275H10.145V1.33552C10.145 0.712751 9.63274 0.19043 8.99993 0.19043C8.36712 0.19043 7.85484 0.712751 7.85484 1.33552V7.46275H1.72761C1.10484 7.46275 0.58252 7.97503 0.58252 8.60784C0.58252 9.24065 1.10484 9.75293 1.72761 9.75293Z"
+											fill="#1C1C1C"
+										/>
+									</svg>
+								</button>
+								<div class="requirements-spollers__body">
+									<p>
+										Юридический статус <br />
+										Индивидуальный предприниматель или юридическое лицо. <br />
+										Субъект малого предпринимательства. <br />
+										Резидент Российской Федерации. <br />
+									</p>
+
+									<p>
+										Деятельность заемщика <br />
+										Срок ведения бизнеса – 9 месяцев. <br />
+										Срок регистрации компании – 6 месяцев. <br />
+									</p>
+
+									<p>
+										Нефинансируемые направления деятельности: <br />
+										- торговля предметами роскоши; <br />
+										- финансовые услуги, в т.ч. лизинг, страхование, торговля на
+										валютном рынке, торговля на рынке ценных бумаг, обмен валют;
+										<br />
+										- деятельность правоохранительных органов, частные охранные
+										предприятия; <br />
+										- юридические и нотариальные услуги; <br />
+										- игорный бизнес, ночные клубы; <br />
+										- производство алкоголя; <br />
+										- научно-техническая деятельность; <br />
+										- культура и искусство; <br />
+										- средства массовой информации; <br />
+										- вырубка и первичная обработка древесины; <br />
+										- ТЭК, добывающая промышленность. <br />
+									</p>
+
+									<p>
+										Финансовые требования <br />
+										Годовая выручка – до 350 млн рублей. <br />
+									</p>
+
+									<p>
+										Территория <br />
+										Заемщик должен фактически находиться в регионе присутствия
+										Малого и микробизнеса, но не далее 100<br />
+										км от города присутствия Малого и микробизнеса.<br />
+										Заемщик должен быть зарегистрирован в регионе присутствия
+										банка.<br />
+									</p>
+								</div>
+							</div>
+							<div class="requirements-spollers__item">
+								<button
+									type="button"
+									data-spoller
+									class="requirements-spollers__title"
+								>
+									<span>Требования к обеспечению</span>
+									<svg
+										width="18"
+										height="18"
+										viewBox="0 0 18 18"
+										fill="none"
+										xmlns="http://www.w3.org/2000/svg"
+									>
+										<path
+											d="M1.72761 9.75293H7.85484V15.8802C7.85484 16.5029 8.36712 17.0253 8.99993 17.0253C9.63274 17.0253 10.145 16.5029 10.145 15.8802V9.75293H16.2723C16.895 9.75293 17.4173 9.24065 17.4173 8.60784C17.4173 7.97503 16.895 7.46275 16.2723 7.46275H10.145V1.33552C10.145 0.712751 9.63274 0.19043 8.99993 0.19043C8.36712 0.19043 7.85484 0.712751 7.85484 1.33552V7.46275H1.72761C1.10484 7.46275 0.58252 7.97503 0.58252 8.60784C0.58252 9.24065 1.10484 9.75293 1.72761 9.75293Z"
+											fill="#1C1C1C"
+										/>
+									</svg>
+								</button>
+								<div class="requirements-spollers__body">Поручительство.</div>
+							</div>
+							<div class="requirements-spollers__item">
+								<button
+									type="button"
+									data-spoller
+									class="requirements-spollers__title"
+								>
+									<span>Необходимые документы</span>
+									<svg
+										width="18"
+										height="18"
+										viewBox="0 0 18 18"
+										fill="none"
+										xmlns="http://www.w3.org/2000/svg"
+									>
+										<path
+											d="M1.72761 9.75293H7.85484V15.8802C7.85484 16.5029 8.36712 17.0253 8.99993 17.0253C9.63274 17.0253 10.145 16.5029 10.145 15.8802V9.75293H16.2723C16.895 9.75293 17.4173 9.24065 17.4173 8.60784C17.4173 7.97503 16.895 7.46275 16.2723 7.46275H10.145V1.33552C10.145 0.712751 9.63274 0.19043 8.99993 0.19043C8.36712 0.19043 7.85484 0.712751 7.85484 1.33552V7.46275H1.72761C1.10484 7.46275 0.58252 7.97503 0.58252 8.60784C0.58252 9.24065 1.10484 9.75293 1.72761 9.75293Z"
+											fill="#1C1C1C"
+										/>
+									</svg>
+								</button>
+								<div class="requirements-spollers__body">
+									– Анкеты и согласия на получение кредитной истории<br />
+									– Официальная отчетность или по форме банка<br />
+									– Справка об обязательствах по форме банка<br />
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="banks-page__form">
+						<form class="form" data-dev action="#">
+							<h2 class="banks-page__form-title">Подайте заявку прямо сейчас</h2>
+							<div class="form__row">
+								<div class="form__column">
+									<div class="form__line">
+										<label for="summa">Сумма</label>
+										<input
+											autocomplete="off"
+											type="text"
+											name="summa"
+											data-error="Введите сумму"
+											placeholder="Введите сумму"
+											class="input"
+										/>
+									</div>
+								</div>
+								<div class="form__column">
+									<div class="form__line">
+										<label for="deadline">Срок</label>
+										<input
+											autocomplete="off"
+											type="text"
+											name="deadline"
+											data-error="Введите срок"
+											placeholder="Введите срок"
+											class="input"
+										/>
+									</div>
+								</div>
+							</div>
+							<div class="form__row">
+								<div class="form__column">
+									<div class="form__line">
+										<label for="company">Компания или ИП</label>
+										<input
+											autocomplete="off"
+											type="text"
+											name="company"
+											data-error="Введите название компании или ИП"
+											placeholder="Название организации или ИП"
+											class="input"
+										/>
+									</div>
+								</div>
+							</div>
+							<div class="form__row">
+								<div class="form__column">
+									<div class="form__line">
+										<label for="lastname">Фамилия</label>
+										<input
+											autocomplete="off"
+											type="text"
+											name="lastname"
+											data-error="Заполните фамилию"
+											placeholder="Фамилия"
+											class="input"
+										/>
+									</div>
+								</div>
+								<div class="form__column">
+									<div class="form__line">
+										<label for="name">Имя</label>
+										<input
+											autocomplete="off"
+											type="text"
+											name="name"
+											data-error="Заполните имя"
+											placeholder="Имя"
+											class="input"
+										/>
+									</div>
+								</div>
+								<div class="form__column">
+									<div class="form__line">
+										<label for="surname">Отчество</label>
+										<input
+											autocomplete="off"
+											type="text"
+											name="surname"
+											data-error="Заполните отчетство"
+											placeholder="Отчество"
+											class="input"
+										/>
+									</div>
+								</div>
+							</div>
+							<div class="form__row">
+								<div class="form__column">
+									<div class="form__line">
+										<label for="email">E-mail</label>
+										<input
+											autocomplete="off"
+											type="text"
+											name="email"
+											data-error="Введите email"
+											placeholder="@barsgroup"
+											class="input"
+										/>
+									</div>
+								</div>
+								<div class="form__column">
+									<div class="form__line">
+										<label for="phone">Мобильный телефон</label>
+										<input
+											autocomplete="off"
+											type="text"
+											name="phone"
+											data-error="Введите телефон"
+											placeholder="+7 (***)-***-****"
+											class="input"
+										/>
+									</div>
+								</div>
+							</div>
+							<div class="feedback__checkbox checkbox">
+								<input
+									id="c_1"
+									data-required="checkbox"
+									data-validate
+									data-error="Дайте согласие"
+									class="checkbox__input"
+									type="checkbox"
+									value="1"
+									name="form[]"
+								/>
+								<label for="c_1" class="checkbox__label"
+									>Принимаю<span class="checkbox__text">
+										Условия пользования</span
+									></label
+								>
+							</div>
+							<button type="submit" class="btn form__btn">Подать заявку</button>
+						</form>
+					</div>
+				</div>
+			</main>
+			@@include('html/_footer.htm',{})
+		</div>
+		@@include('html/_popup.htm',{}) @@include('html/_js.htm',{})
+	</body>
+</html>

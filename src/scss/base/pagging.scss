@@ -1,14 +1,47 @@
 .pagging {
+	margin-top: 36px;
 	display: flex;
 	align-items: center;
 	justify-content: center;
+	height: 42px;
 	// .pagging__arrow
 	&__arrow {
+		font-size: 14px;
+		line-height: 125%;
+		height: 100%;
+		@include adaptiveValue('padding-right', 20, 10);
+		@include adaptiveValue('padding-left', 20, 10);
+		border: 1px solid rgba(23, 23, 23, 0.12);
+		border-radius: 10px;
+		display: flex;
+		justify-content: center;
+		align-items: center;
 	}
 	// .pagging__list
 	&__list {
 		display: flex;
+		height: 100%;
+		padding: 0 5px;
 		li {
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			border: 1px solid rgba(23, 23, 23, 0.12);
+			border-radius: 10px;
+			a {
+				width: 100%;
+				display: block;
+				@include adaptiveValue('padding-right', 20, 10);
+				@include adaptiveValue('padding-left', 20, 10);
+				height: 100%;
+				display: flex;
+				align-items: center;
+				justify-content: ce
+				nter;
+			}
+		}
+		li + li {
+			margin-left: 5px;
 		}
 	}
 	// .pagging__item

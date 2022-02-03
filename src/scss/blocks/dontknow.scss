@@ -1,0 +1,40 @@
+.dontknow {
+	@include adaptiveValue('margin-top', 110, 55);
+	/* .dontknow__container */
+	&__container {
+	}
+	/* .dontknow__body */
+	&__body {
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+		flex-direction: column;
+		& > * + * {
+			margin-top: 40px;
+		}
+		@media (min-width: $tablet) {
+			flex-direction: row;
+			& > * + * {
+				margin-left: 40px;
+				margin-top: 0;
+			}
+		}
+	}
+	/* .dontknow__inner */
+	&__inner {
+		display: flex;
+		align-items: center;
+		span {
+			font-weight: 600;
+			font-size: 20px;
+			line-height: 120%;
+		}
+	}
+	/* .dontknow__img */
+	&__img {
+		margin-right: 12px;
+	}
+	/* .dontknow__btn */
+	&__btn {
+	}
+}

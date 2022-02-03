@@ -131,7 +131,7 @@ export let _slideToggle = (target, duration = 500) => {
 }
 // Вспомогательные модули блокировки прокрутки и скочка ====================================================================================================================================================================================================================================================================================
 export let bodyLockStatus = true;
-export let bodyLockToggle = (delay = 500) => {
+export let bodyLockToggle = (delay = 0) => {
 	if (document.documentElement.classList.contains('lock')) {
 		bodyUnlock(delay);
 	} else {

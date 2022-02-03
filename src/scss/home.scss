@@ -3,7 +3,7 @@
 	position: relative;
 	@media (min-width: $mobile) {
 		margin-top: 17px;
-		@include adaptiveValue("margin-bottom", 260, 32);
+		@include adaptiveValue('margin-bottom', 260, 32);
 	}
 	/* .promo__container */
 	&__container {
@@ -395,8 +395,8 @@
 		@include adaptiveValue('margin-top', 52, 36);
 		display: grid;
 		grid-template: 1fr / 1fr;
-		@media (min-width:$mobile){
-			 grid-template: 1fr / 1fr 1fr; 
+		@media (min-width: $mobile) {
+			grid-template: 1fr / 1fr 1fr;
 		}
 		@media (min-width: $tablet) {
 			grid-template: 1fr / repeat(auto-fit, minmax(390px, 1fr));
@@ -632,7 +632,7 @@
 	/* .spollers__title */
 	&__title {
 		text-align: left;
-		font-weight: 600;
+		font-weight: 700;
 		@include adaptiveValue('font-size', 24, 18);
 		line-height: 120%;
 		display: flex;
@@ -651,7 +651,7 @@
 
 			display: block;
 		}
-		&._spoller-active {
+		._spoller-active & {
 			svg {
 				transition: 0.3s;
 				transform: rotate(45deg);

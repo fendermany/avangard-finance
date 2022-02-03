@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="ru">
+	@@include('html/_head.htm',{ "title":"Главная" })
+	<body>
+		<div class="wrapper home">
+			@@include('html/_header.htm',{})
+			<main class="page service-screen">
+				<div class="page__container">
+					<div class="page__body">
+						<div class="service-screen__img">
+							<img src="@img/service-screen.svg" alt="service-screen" />
+						</div>
+						<h1 class="service-screen__title">
+							Здесь будет список ваших заявок.
+						</h1>
+						<div class="service-screen__descr">
+							Подайте заявку на один из продуктов из
+							<a href="javascript:">каталога</a>
+						</div>
+						<button class="service-screen__btn btn">На главную</button>
+					</div>
+				</div>
+			</main>
+			@@include('html/_footer.htm',{})
+		</div>
+		@@include('html/_popup.htm',{}) @@include('html/_js.htm',{})
+	</body>
+</html>

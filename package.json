@@ -69,6 +69,7 @@
 		"webpack-stream": "latest"
 	},
 	"dependencies": {
-		"simplebar": "latest"
+		"simplebar": "latest",
+		"sticky-sidebar-v2": "^1.1.1"
 	}
 }

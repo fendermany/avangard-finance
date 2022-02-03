@@ -151,7 +151,6 @@
 			right: -10%;
 		}
 		@include adaptiveValue('width', 465, 252);
-		@include adaptiveValue('line-height', 418, 222);
 		@media (min-width: $mobile) {
 			top: -35%;
 			right: -10%;

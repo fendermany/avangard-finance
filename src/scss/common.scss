@@ -10,10 +10,11 @@
 	border-radius: 10px;
 	overflow: hidden;
 	width: max-content;
-	font-weight: 600;
+	font-weight: 400;
 	color: #fff;
-	@include adaptiveValue('font-size', 20, 14);
-	@include adaptiveValue('line-height', 24, 17);
+	white-space: nowrap;
+	@include adaptiveValue('font-size', 16, 14);
+	line-height: 125%;
 	@media (any-hover: hover) {
 		&:hover {
 			background: #27e8e8;
@@ -111,158 +112,13 @@ input:checked + .slider:after {
 	background: #1d1d1d;
 }
 
-// Dark Mode
 
-.dark-mode {
-	background: #171717;
-	color: #fff;
-	.icon-menu {
-		&:before {
-			background: #fff;
-		}
-		&:after {
-			background: #fff;
-		}
-		span {
-			background: #fff;
-		}
-	}
-	.promo__list-item::before{
-		background: #fff;
-	}
-	.header__auth button:first-child {
-		color: #fff;
-		border: 1px solid #fff;
-	}
-	.header__top {
-		background: #171717;
-		color: #fff;
-	}
-	.header__middle {
-		background: #171717;
-		color: #fff;
-	}
-	.header__body {
-		background: #171717;
-		color: #fff;
-	}
-	.header__bottom {
-		background: #171717;
-		color: #fff;
-	}
-	.menubar__search-img {
-		color: #fff;
-	}
 
-	.menubar__menu-button svg path {
-		fill: #fff;
-	}
+// Titles
 
-	.menubar__menu-button svg circle {
-		stroke: #fff;
-	}
-	.menubar__search-input {
-		border: 1px solid #fff;
-	}
-	.menubar__search-input {
-		background: #171717;
-		color: #fff;
-	}
-	.menubar__menu-item.mvp {
-		border: 1.75px solid #fff;
-	}
-	.menubar__menu-item--counter {
-		background: #fff;
-		color: #171717;
-	}
-	.topmenu {
-		background: #171717;
-		color: #fff;
-	}
-	.toggleMenu__item,
-	.toggleMenu__subitem{
-		background: #3f4242;
-	}
-	.toggleMenu__title{
-		color: #171717;
-	}
-	.btn {
-		background: #3f4242;
-		@media (any-hover: hover) {
-			&:hover {
-				background: #7a8282;
-				box-shadow: 0px 5px 27px -2px rgba(34, 60, 80, 0.27);
-			}
-		}
-		&:active {
-			background: #5e6464;
-			box-shadow: 0px 5px 27px -2px rgba(34, 60, 80, 0.27);
-		}
-	}
-	.btn_transparent {
-		color: #fff;
-		border: 1px solid #fff;
-	}
-	.credits__list-item {
-		background: #171717;
-		color: #fff;
-		border: 1px solid #fff;
-	}
-	.credits__btn {
-		background: #171717;
-		@media (min-width: $pc) {
-			background: linear-gradient(259deg, #5269dc 26%, #24cfcf 100%);
-			-webkit-background-clip: text;
-			-webkit-text-fill-color: transparent;
-			color: #5269dc;
-		}
-	}
-	.bussiness__item {
-		background: #171717;
-		color: #fff;
-		border: 1px solid #fff;
-	}
-	.rates__item {
-		background: #171717;
-		color: #fff;
-		border: 1px solid #fff;
-	}
-	.rates__item-list--item::before {
-		background: url(../img/li-white.svg) no-repeat center center/cover;
-	}
-	.feedback__body {
-		background: #171717;
-		color: #fff;
-		border: 1px solid #fff;
-	}
-	.feedback__form svg path{
-		fill: #171717;
-	}
-	.feedback__checkbox label span {
-		color: #fff;
-	}
-	.feedback__btn {
-		border: 1px solid #fff;
-	}
-	.feedback__checkbox label{
-		color: #a7b1b1;
-	}
-	.checkbox__label:before {
-		border: 2px solid #fff;
-	}
-	.checkbox__input:checked + .checkbox__label:before {
-		background: url(../img/li-white.svg) no-repeat center center/contain;
-	}
-	.feedback__form input {
-		background: #171717;
-		color: #fff;
-		border: 1px solid #fff;
-	}
-	.footer {
-		background: #171717;
-		color: #fff;
-	}
-	.spollers__title svg path {
-		fill: #fff;
-	}
+.title {
+	font-weight: 600;
+	@include adaptiveValue('font-size', 52, 24);
+	@include adaptiveValue('line-height', 62, 29);
+	color: #36464F;
 }

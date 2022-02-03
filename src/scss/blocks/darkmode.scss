@@ -1,0 +1,215 @@
+// Dark Mode
+
+.dark-mode {
+	.icon-menu {
+		&:before {
+			background: #fff;
+		}
+		&:after {
+			background: #fff;
+		}
+		span {
+			background: #fff;
+		}
+	}
+	.promo__list-item::before {
+		background: #171717;
+	}
+	.header__auth button:first-child {
+		color: #fff;
+		border: 1px solid #fff;
+	}
+	.header__top {
+		background: #171717;
+		color: #fff;
+	}
+	.header__middle {
+		background: #171717;
+		color: #fff;
+	}
+	.header__body {
+		background: #171717;
+		color: #fff;
+	}
+	.header__bottom {
+		background: #171717;
+		color: #fff;
+	}
+	.menubar__search-img {
+		color: #fff;
+	}
+
+	.menubar__menu-button {
+		background: #171717;
+	}
+
+	.menubar__menu-button svg path {
+		fill: #fff;
+	}
+
+	.menubar__menu-button svg circle {
+		stroke: #fff;
+	}
+	.menubar__search-input {
+		border: 1px solid #fff;
+	}
+	.menubar__search-input {
+		background: #171717;
+		color: #fff;
+	}
+	.menubar__menu-item.mvp {
+		border: 1.75px solid #fff;
+	}
+	.menubar__menu-item--counter {
+		background: #fff;
+		color: #171717;
+	}
+	.topmenu {
+		background: #171717;
+		color: #fff;
+	}
+	.toggleMenu__item,
+	.toggleMenu__subitem {
+		background: #3f4242;
+	}
+	.toggleMenu__title {
+		color: #171717;
+	}
+	.btn {
+		background: #3f4242;
+		@media (any-hover: hover) {
+			&:hover {
+				background: #7a8282;
+				box-shadow: 0px 5px 27px -2px rgba(34, 60, 80, 0.27);
+			}
+		}
+		&:active {
+			background: #5e6464;
+			box-shadow: 0px 5px 27px -2px rgba(34, 60, 80, 0.27);
+		}
+	}
+	.btn_transparent {
+		color: #fff;
+		border: 1px solid #fff;
+	}
+	.credits__list-item {
+		background: #171717;
+		color: #fff;
+		border: 1px solid #fff;
+	}
+	.credits__btn {
+		background: #171717;
+		@media (min-width: $pc) {
+			background: linear-gradient(259deg, #5269dc 26%, #24cfcf 100%);
+			-webkit-background-clip: text;
+			-webkit-text-fill-color: transparent;
+			color: #5269dc;
+		}
+	}
+	.bussiness__item {
+		background: #171717;
+		color: #fff;
+		border: 1px solid #fff;
+	}
+	.rates__item {
+		background: #171717;
+		color: #fff;
+		border: 1px solid #fff;
+	}
+	.rates__item-list--item::before {
+		background: url(../img/li-white.svg) no-repeat center center/cover;
+	}
+	.feedback__body {
+		background: #171717;
+		color: #fff;
+		border: 1px solid #fff;
+	}
+	.feedback__form svg path {
+		fill: #171717;
+	}
+	.feedback__checkbox label span {
+		color: #fff;
+	}
+	.feedback__btn {
+		border: 1px solid #fff;
+	}
+	.feedback__checkbox label {
+		color: #a7b1b1;
+	}
+	.checkbox__label:before {
+		border: 2px solid #fff;
+	}
+	.checkbox__input:checked + .checkbox__label:before {
+		background: url(../img/li-white.svg) no-repeat center center/contain;
+	}
+	.feedback__form input {
+		background: #171717;
+		color: #fff;
+		border: 1px solid #fff;
+	}
+	.footer {
+		background: #171717;
+		color: #fff;
+	}
+	.spollers__title svg path {
+		fill: #fff;
+	}
+
+	// filter
+
+	.filter__wrapper,
+	.select__title,
+	.select__options,
+	.input,
+	.range__window,
+	.banks-list__item,
+	.menubar__menu-item {
+		background: #171717;
+		color: #fff;
+		border: 1px solid #fff;
+	}
+
+	.range__input {
+		background: #171717;
+		color: #fff;
+	}
+
+	.showfilter {
+		background: #171717;
+		color: #fff;
+		svg path {
+			fill: #fff;
+		}
+	}
+
+	// Topbar
+
+	.topbar__list-item {
+		background: #171717;
+		color: #fff;
+	}
+
+	// Bank lists
+
+	.banks-list__item--column {
+		&:before {
+			background: url('@img/li-white.svg') no-repeat center / contain;
+		}
+	}
+
+	// Pagging
+
+	.pagging {
+		&__arrow,
+		.pagging__listdontknow__body li {
+			background: #171717;
+			color: #fff;
+		}
+	}
+
+	// faq
+
+	.faq {
+		color: $mainColor;
+	}
+}

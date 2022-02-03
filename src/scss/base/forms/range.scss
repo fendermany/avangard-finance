@@ -24,6 +24,7 @@
 	height: 100%;
 	position: relative;
 	z-index: 1;
+	background: #c4c4c4;
 }
 /* Wrapper for all connect elements.
  */
@@ -80,13 +81,16 @@
 /* Slider size and handle placement;
  */
 .noUi-horizontal {
-	height: 18px;
+	height: 2px;
 }
 .noUi-horizontal .noUi-handle {
-	width: 34px;
-	height: 28px;
+	width: 21px;
+	height: 21px;
+	border-radius: 50%;
+	background: $olive;
 	right: -17px;
-	top: -6px;
+	top: 50%;
+	transform: translateY(-50%);
 }
 .noUi-vertical {
 	width: 18px;
@@ -106,15 +110,12 @@
  */
 .noUi-target {
 	background: #fafafa;
-	border-radius: 4px;
-	border: 1px solid #d3d3d3;
-	box-shadow: inset 0 1px 1px #f0f0f0, 0 3px 6px -5px #bbb;
 }
 .noUi-connects {
 	border-radius: 3px;
 }
 .noUi-connect {
-	background: #3fb8af;
+	background: $olive;
 }
 /* Handles and cursors;
  */
@@ -125,41 +126,11 @@
 	cursor: ns-resize;
 }
 .noUi-handle {
-	border: 1px solid #d9d9d9;
-	border-radius: 3px;
-	background: #fff;
 	cursor: default;
-	box-shadow: inset 0 0 1px #fff, inset 0 1px 7px #ebebeb, 0 3px 6px -3px #bbb;
 }
 .noUi-active {
-	box-shadow: inset 0 0 1px #fff, inset 0 1px 7px #ddd, 0 3px 6px -3px #bbb;
 }
-/* Handle stripes;
- */
-.noUi-handle:before,
-.noUi-handle:after {
-	content: "";
-	display: block;
-	position: absolute;
-	height: 14px;
-	width: 1px;
-	background: #e8e7e6;
-	left: 14px;
-	top: 6px;
-}
-.noUi-handle:after {
-	left: 17px;
-}
-.noUi-vertical .noUi-handle:before,
-.noUi-vertical .noUi-handle:after {
-	width: 14px;
-	height: 1px;
-	left: 6px;
-	top: 14px;
-}
-.noUi-vertical .noUi-handle:after {
-	top: 17px;
-}
+
 /* Disabled state;
  */
 [disabled] .noUi-connect {
@@ -290,4 +261,12 @@
 	transform: translate(0, -18px);
 	top: auto;
 	right: 28px;
+}
+
+// Animation
+
+#steps-slider.noUi-state-tap .noUi-connect,
+#steps-slider.noUi-state-tap .noUi-origin {
+	-webkit-transition: transform 1600ms;
+	transition: transform 1600ms;
 }

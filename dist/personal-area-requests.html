@@ -1,0 +1,600 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+	<title>Заявки</title>
+	<meta charset="UTF-8">
+	<meta name="format-detection" content="telephone=no">
+	<!-- <style>body{opacity: 0;}</style> -->
+	<link rel="stylesheet" href="css/style.min.css?_v=20220203230400">
+	<link rel="shortcut icon" href="favicon.ico">
+	<!-- <meta name="robots" content="noindex, nofollow"> -->
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+
+<body>
+	<div class="wrapper home">
+		<header class="header">
+			<div class="header__body">
+				<div class="header__top">
+					<div class="header__container">
+						<a class="header__logo logo" href="/home">
+							<div class="logo__img">
+								<img data-src="img/logo.svg" alt="logo" />
+							</div>
+							<span class="logo__text">АВАНГАРД-ФИНАНС</span>
+						</a>
+						<div class="header__menu menu">
+							<nav class="menu__body">
+								<ul class="menu__list">
+									<li class="menu__item _active">
+										<a href="#" class="menu__link">Кредиты</a>
+									</li>
+									<li class="menu__item">
+										<a href="#" class="menu__link">Лизинг</a>
+									</li>
+									<li class="menu__item"><a href="#" class="menu__link">РКО</a></li>
+									<li class="menu__item">
+										<a href="#" class="menu__link">Факторинг</a>
+									</li>
+									<li class="menu__item">
+										<a href="#" class="menu__link">Гарантии под контракты</a>
+									</li>
+									<li class="menu__item">
+										<a href="#" class="menu__link">Экспортное страхование</a>
+									</li>
+									<img src="img/arrow-right.svg" alt="arrow-right" />
+								</ul>
+							</nav>
+						</div>
+						<div class="header__panel">
+							<div class="header__search search">
+								<form action="#">
+									<div class="_icon-search"></div>
+									<input autocomplete="off" type="text" name="form[]" data-error="Ошибка" placeholder="Поиск" class="search__input" />
+								</form>
+							</div>
+							<div data-da=".header__inner,767.98,first" class="header__auth auth">
+								<div class="auth__offline">
+									<button type="button" class="header__btn btn">Регистрация</button>
+									<button type="button" class="header__btn btn">Вход</button>
+								</div>
+								<div class="auth__online">
+									<div class="auth__img">
+										<img src="img/thumbnail.svg" alt="you" />
+									</div>
+									<div class="auth__inner">
+										<div class="auth__name">Михаил Николаевич Якутин</div>
+										<div class="auth__label">Личный кабинет</div>
+									</div>
+									<div class="auth__icon _icon-arrow-down"></div>
+								</div>
+								<div class="auth__list">
+									<a href="javascript:" class="auth__list-item">
+										<svg width="20" height="24" viewBox="0 0 20 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+											<path d="M7.5 9C8.32843 9 9 8.32843 9 7.5C9 6.67157 8.32843 6 7.5 6C6.67157 6 6 6.67157 6 7.5C6 8.32843 6.67157 9 7.5 9Z" fill="#B9C3CD" />
+											<path d="M14 7.5C14 8.32843 13.3284 9 12.5 9C11.6716 9 11 8.32843 11 7.5C11 6.67157 11.6716 6 12.5 6C13.3284 6 14 6.67157 14 7.5Z" fill="#B9C3CD" />
+											<path d="M7.28091 11.3753C6.9359 10.944 6.3066 10.8741 5.87534 11.2191C5.44408 11.5641 5.37416 12.1934 5.71917 12.6247C6.87399 14.0682 8.39439 14.875 10 14.875C11.6057 14.875 13.1261 14.0682 14.2809 12.6247C14.6259 12.1934 14.556 11.5641 14.1247 11.2191C13.6935 10.8741 13.0642 10.944 12.7192 11.3753C11.874 12.4318 10.8944 12.875 10 12.875C9.10569 12.875 8.12609 12.4318 7.28091 11.3753Z" fill="#B9C3CD" />
+											<path fill-rule="evenodd" clip-rule="evenodd" d="M7.88664 21.2497C8.72518 22.0883 9 22.625 9 23C9 23.5523 9.44771 24 10 24C10.5523 24 11 23.5523 11 23C11 22.625 11.2748 22.0883 12.1134 21.2497C12.6138 20.7493 13.1888 20.2562 13.8312 19.7055C14.2491 19.3471 14.6956 18.9643 15.1685 18.5391C17.4412 16.496 20 13.7369 20 9.72727C20 4.32627 15.4936 0 10 0C4.50638 0 0 4.32627 0 9.72727C0 13.7369 2.55881 16.496 4.83145 18.5391C5.30441 18.9643 5.75087 19.3471 6.16884 19.7055C6.81112 20.2562 7.3862 20.7493 7.88664 21.2497ZM2 9.72727C2 5.4884 5.55249 2 10 2C14.4475 2 18 5.4884 18 9.72727C18 12.8085 16.0588 15.0494 13.8315 17.0518C13.4435 17.4005 13.0323 17.7539 12.6246 18.1044C11.9285 18.7026 11.2423 19.2923 10.6991 19.8355C10.4598 20.0748 10.2204 20.3304 10 20.6024C9.77957 20.3304 9.54016 20.0748 9.30086 19.8355C8.75766 19.2923 8.07156 18.7026 7.37542 18.1044C6.96767 17.7539 6.55648 17.4005 6.16855 17.0518C3.94119 15.0494 2 12.8085 2 9.72727Z" fill="#B9C3CD" />
+										</svg>
+										<span>Заявки</span>
+									</a>
+									<a href="javascript:" class="auth__list-item">
+										<svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+											<path fill-rule="evenodd" clip-rule="evenodd" d="M10 10C12.7614 10 15 7.76142 15 5C15 2.23858 12.7614 0 10 0C7.23858 0 5 2.23858 5 5C5 7.76142 7.23858 10 10 10ZM10 8C11.6569 8 13 6.65685 13 5C13 3.34315 11.6569 2 10 2C8.34315 2 7 3.34315 7 5C7 6.65685 8.34315 8 10 8Z" fill="#B9C3CD" />
+											<path fill-rule="evenodd" clip-rule="evenodd" d="M6 11C2.68629 11 0 13.6863 0 17V18C0 19.1046 0.895432 20 2 20H18C19.1046 20 20 19.1046 20 18V17C20 13.6863 17.3137 11 14 11H13.0462L10 14.4814L6.95377 11H6ZM2 17C2 14.7909 3.79086 13 6 13H6.04623L10 17.5186L13.9538 13H14C16.2091 13 18 14.7909 18 17V18H2V17Z" fill="#B9C3CD" />
+										</svg>
+										<span>Личные данные</span>
+									</a>
+									<a href="javascript:" class="auth__list-item">
+										<svg width="22" height="16" viewBox="0 0 22 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+											<path d="M5 10C4.44772 10 4 10.4477 4 11C4 11.5523 4.44772 12 5 12H11C11.5523 12 12 11.5523 12 11C12 10.4477 11.5523 10 11 10H5Z" fill="#B9C3CD" />
+											<path fill-rule="evenodd" clip-rule="evenodd" d="M0 3C0 1.34315 1.34315 0 3 0H19C20.6569 0 22 1.34315 22 3V13C22 14.6569 20.6569 16 19 16H3C1.34315 16 0 14.6569 0 13V3ZM3 2C2.44772 2 2 2.44772 2 3V4H20V3C20 2.44772 19.5523 2 19 2H3ZM2 13V6H20V13C20 13.5523 19.5523 14 19 14H3C2.44772 14 2 13.5523 2 13Z" fill="#B9C3CD" />
+										</svg>
+										<span>Сохраненные заявки</span>
+									</a>
+									<a href="javascript:" class="auth__list-item">
+										<svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+											<path d="M23.9769 12.7499H12.3107L4.06154 20.999C6.17706 22.8666 8.95619 23.9999 12 23.9999C18.3755 23.9999 23.5898 19.0279 23.9769 12.7499Z" fill="#B9C3CD" />
+											<path d="M3.00087 19.9384C1.13326 17.8228 0 15.0437 0 11.9999C0 5.62436 4.97195 0.410096 11.25 0.0229492V11.6892L3.00087 19.9384Z" fill="#B9C3CD" />
+											<path d="M12.75 0.0229492V11.2499H23.9769C23.6051 5.21988 18.78 0.394801 12.75 0.0229492Z" fill="#B9C3CD" />
+										</svg>
+										<span>Финансовые новости</span>
+									</a>
+									<a href="javascript:" class="auth__list-item">
+										<svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+											<path d="M0 3C0 1.34315 1.34315 0 3 0H10C11.6569 0 13 1.34315 13 3V7C12.3333 7 11.6667 7 11 7V3C11 2.44772 10.5523 2 10 2H3C2.44772 2 2 2.44772 2 3V17C2 17.5523 2.44772 18 3 18H10C10.5523 18 11 17.5523 11 17V13H13V17C13 18.6569 11.6569 20 10 20H3C1.34315 20 0 18.6569 0 17V3Z" fill="#B9C3CD" />
+											<path d="M5 10C5 9.44771 5.44772 9 6 9L15 9V7.5C15 7.11198 15.2245 6.75899 15.5758 6.59441C15.9272 6.42983 16.3421 6.48337 16.6402 6.73178L19.6347 9.22723C19.8578 9.41063 20 9.68871 20 10C20 10.2503 19.9081 10.479 19.7561 10.6544C19.7273 10.6877 19.6963 10.7191 19.6633 10.7484C19.6536 10.7569 19.6439 10.7653 19.6339 10.7735L16.6402 13.2682C16.3421 13.5166 15.9272 13.5702 15.5758 13.4056C15.2245 13.241 15 12.888 15 12.5V11L6 11C5.44772 11 5 10.5523 5 10Z" fill="#B9C3CD" />
+										</svg>
+										<span>Выход</span>
+									</a>
+								</div>
+							</div>
+						</div>
+						<div class="header__inner">
+							<div class="icon-menu__wrapper">
+								<button type="button" class="menu__icon icon-menu">
+									<span></span>
+								</button>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="header__middle">
+					<div class="header__container">
+						<nav class="header__topmenu topmenu">
+							<ul class="topmenu__list">
+								<li class="topmenu__item">
+									<a href="" class="topmenu__link">Малый и средний бизнес</a>
+								</li>
+								<li class="topmenu__item">
+									<a href="" class="topmenu__link">Крупный бизнес</a>
+								</li>
+								<li class="topmenu__item">
+									<a href="" class="topmenu__link">Банкам</a>
+								</li>
+								<li class="topmenu__item">
+									<a href="" class="topmenu__link">Блог</a>
+								</li>
+								<li class="topmenu__item">
+									<a href="" class="topmenu__link">О нас</a>
+								</li>
+							</ul>
+						</nav>
+						<a href="tel:+999999999" class="header__phone">8 800 000 000 000</a>
+						<div class="header__switch">
+							<div class="switch__text">Темная тема:</div>
+							<label class="switch">
+								<input type="checkbox" />
+								<div class="slider"></div>
+							</label>
+						</div>
+					</div>
+				</div>
+				<div class="header__bottom">
+					<div class="header__container">
+						<div class="toggleButton btn _icon-arrow-right">
+							<div class="toggleButton__hamburger">
+								<span></span>
+								<span></span>
+								<span></span>
+							</div>
+							<span class="toggleButton__text">Услуги</span>
+						</div>
+						<nav class="toggleMenu">
+							<h2 class="toggleMenu__title">Услуги</h2>
+							<div class="toggleMenu__close">
+								<span></span>
+								<span></span>
+							</div>
+							<ul data-spollers data-one-spoller class="toggleMenu__list">
+								<li class="toggleMenu__item">
+									<a data-spoller href="#" class="toggleMenu__link">Уровень I</a>
+									<ul class="toggleMenu__sublist">
+										<li class="toggleMenu__subitem">
+											<a href="#" class="toggleMenu__sublink">Уровень II</a>
+										</li>
+										<li class="toggleMenu__subitem">
+											<a href="#" class="toggleMenu__sublink">Уровень II</a>
+										</li>
+										<li class="toggleMenu__subitem">
+											<a href="#" class="toggleMenu__sublink">Уровень II</a>
+										</li>
+										<li class="toggleMenu__subitem">
+											<a href="#" class="toggleMenu__sublink">Уровень II</a>
+										</li>
+									</ul>
+								</li>
+								<li class="toggleMenu__item">
+									<a data-spoller href="#" class="toggleMenu__link">Уровень I</a>
+									<ul class="toggleMenu__sublist">
+										<li class="toggleMenu__subitem">
+											<a href="#" class="toggleMenu__sublink">Уровень II</a>
+										</li>
+										<li class="toggleMenu__subitem">
+											<a href="#" class="toggleMenu__sublink">Уровень II</a>
+										</li>
+										<li class="toggleMenu__subitem">
+											<a href="#" class="toggleMenu__sublink">Уровень II</a>
+										</li>
+										<li class="toggleMenu__subitem">
+											<a href="#" class="toggleMenu__sublink">Уровень II</a>
+										</li>
+									</ul>
+								</li>
+								<li class="toggleMenu__item">
+									<a data-spoller href="#" class="toggleMenu__link">Уровень I</a>
+									<ul class="toggleMenu__sublist">
+										<li class="toggleMenu__subitem">
+											<a href="#" class="toggleMenu__sublink">Уровень II</a>
+										</li>
+										<li class="toggleMenu__subitem">
+											<a href="#" class="toggleMenu__sublink">Уровень II</a>
+										</li>
+										<li class="toggleMenu__subitem">
+											<a href="#" class="toggleMenu__sublink">Уровень II</a>
+										</li>
+										<li class="toggleMenu__subitem">
+											<a href="#" class="toggleMenu__sublink">Уровень II</a>
+										</li>
+									</ul>
+								</li>
+								<li class="toggleMenu__item">
+									<a data-spoller href="#" class="toggleMenu__link">Уровень I</a>
+									<ul class="toggleMenu__sublist">
+										<li class="toggleMenu__subitem">
+											<a href="#" class="toggleMenu__sublink">Уровень II</a>
+										</li>
+										<li class="toggleMenu__subitem">
+											<a href="#" class="toggleMenu__sublink">Уровень II</a>
+										</li>
+										<li class="toggleMenu__subitem">
+											<a href="#" class="toggleMenu__sublink">Уровень II</a>
+										</li>
+										<li class="toggleMenu__subitem">
+											<a href="#" class="toggleMenu__sublink">Уровень II</a>
+										</li>
+									</ul>
+								</li>
+								<li class="toggleMenu__item">
+									<a data-spoller href="#" class="toggleMenu__link">Уровень I</a>
+									<ul class="toggleMenu__sublist">
+										<li class="toggleMenu__subitem">
+											<a href="#" class="toggleMenu__sublink">Уровень II</a>
+										</li>
+										<li class="toggleMenu__subitem">
+											<a href="#" class="toggleMenu__sublink">Уровень II</a>
+										</li>
+										<li class="toggleMenu__subitem">
+											<a href="#" class="toggleMenu__sublink">Уровень II</a>
+										</li>
+										<li class="toggleMenu__subitem">
+											<a href="#" class="toggleMenu__sublink">Уровень II</a>
+										</li>
+									</ul>
+								</li>
+								<li class="toggleMenu__item">
+									<a data-spoller href="#" class="toggleMenu__link">Уровень I</a>
+									<ul class="toggleMenu__sublist">
+										<li class="toggleMenu__subitem">
+											<a href="#" class="toggleMenu__sublink">Уровень II</a>
+										</li>
+										<li class="toggleMenu__subitem">
+											<a href="#" class="toggleMenu__sublink">Уровень II</a>
+										</li>
+										<li class="toggleMenu__subitem">
+											<a href="#" class="toggleMenu__sublink">Уровень II</a>
+										</li>
+										<li class="toggleMenu__subitem">
+											<a href="#" class="toggleMenu__sublink">Уровень II</a>
+										</li>
+									</ul>
+								</li>
+								<li class="toggleMenu__item">
+									<a data-spoller href="#" class="toggleMenu__link">Уровень I</a>
+									<ul class="toggleMenu__sublist">
+										<li class="toggleMenu__subitem">
+											<a href="#" class="toggleMenu__sublink">Уровень II</a>
+										</li>
+										<li class="toggleMenu__subitem">
+											<a href="#" class="toggleMenu__sublink">Уровень II</a>
+										</li>
+										<li class="toggleMenu__subitem">
+											<a href="#" class="toggleMenu__sublink">Уровень II</a>
+										</li>
+										<li class="toggleMenu__subitem">
+											<a href="#" class="toggleMenu__sublink">Уровень II</a>
+										</li>
+									</ul>
+								</li>
+								<li class="toggleMenu__item">
+									<a data-spoller href="#" class="toggleMenu__link">Уровень I</a>
+									<ul class="toggleMenu__sublist">
+										<li class="toggleMenu__subitem">
+											<a href="#" class="toggleMenu__sublink">Уровень II</a>
+										</li>
+										<li class="toggleMenu__subitem">
+											<a href="#" class="toggleMenu__sublink">Уровень II</a>
+										</li>
+										<li class="toggleMenu__subitem">
+											<a href="#" class="toggleMenu__sublink">Уровень II</a>
+										</li>
+										<li class="toggleMenu__subitem">
+											<a href="#" class="toggleMenu__sublink">Уровень II</a>
+										</li>
+									</ul>
+								</li>
+							</ul>
+						</nav>
+					</div>
+				</div>
+			</div>
+		</header>
+		<section class="menubar">
+			<div class="menubar__container">
+				<div class="menubar__body">
+					<form class="menubar__search">
+						<div class="menubar__search-img">
+							<div class="_icon-search"></div>
+						</div>
+						<input autocomplete="off" type="text" name="form[]" data-error="Ошибка" placeholder="Ваш поисковый запрос" class="menubar__search-input" />
+					</form>
+					<nav class="menubar__menu">
+						<button type="button" class="menubar__menu-button">
+							<svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+								<path d="M19 8.25C19.4142 8.25 19.75 7.91421 19.75 7.5C19.75 7.08579 19.4142 6.75 19 6.75V8.25ZM10 6.75C9.58579 6.75 9.25 7.08579 9.25 7.5C9.25 7.91421 9.58579 8.25 10 8.25V6.75ZM19 6.75H10V8.25H19V6.75Z" fill="#2B3949" />
+								<path d="M14 17.25C14.4142 17.25 14.75 16.9142 14.75 16.5C14.75 16.0858 14.4142 15.75 14 15.75V17.25ZM5 15.75C4.58579 15.75 4.25 16.0858 4.25 16.5C4.25 16.9142 4.58579 17.25 5 17.25V15.75ZM14 15.75H5V17.25H14V15.75Z" fill="#2B3949" />
+								<circle cx="6.5" cy="7.5" r="3.5" stroke="#2B3949" stroke-width="1.5" />
+								<circle cx="17.5" cy="16.5" r="3.5" stroke="#2B3949" stroke-width="1.5" />
+							</svg>
+						</button>
+						<ul class="menubar__menu-list">
+							<li class="menubar__menu-item mvp">
+								<a href="#" class="menubar__menu-link">Кредиты</a>
+								<span class="menubar__menu-item--counter"> 7 </span>
+							</li>
+							<li class="menubar__menu-item">
+								<a href="#" class="menubar__menu-link">РКО</a>
+							</li>
+							<li class="menubar__menu-item">
+								<a href="#" class="menubar__menu-link">Лизинг</a>
+							</li>
+							<li class="menubar__menu-item">
+								<a href="#" class="menubar__menu-link">Факторинг</a>
+							</li>
+							<li class="menubar__menu-item">
+								<a href="#" class="menubar__menu-link">Гарантии под контракты</a>
+							</li>
+							<li class="menubar__menu-item">
+								<a href="#" class="menubar__menu-link">Экспортное страхование</a>
+							</li>
+						</ul>
+					</nav>
+				</div>
+			</div>
+		</section>
+
+		<main class="page personal-area">
+			<div class="page__container">
+				<div class="page__breadcrumbs breadcrumbs">
+					<ol itemscope itemtype="https://schema.org/BreadcrumbList">
+						<li itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+							<a itemprop="item" href="javascript:">
+								<span itemprop="name">Главная</span></a>
+							<meta itemprop="position" content="1" />
+						</li>
+						<li itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+							<a itemprop="item" href="javascript:">
+								<span itemprop="name">Личный кабинет</span></a>
+							<meta itemprop="position" content="2" />
+						</li>
+					</ol>
+				</div>
+				<div class="page__wrapper">
+					<div class="page__aside profile">
+						<div class="profile__body">
+							<div class="profile__section">Личный кабинет</div>
+							<div class="profile__inner">
+								<div class="profile__img">
+									<picture><source srcset="img/profile-img.webp"type="image/webp"><img src="img/profile-img.png" alt="profile-img" /></picture>
+								</div>
+								<div class="profile__name">Руслан Бекирович</div>
+							</div>
+							<div class="profile__verificationStatus _icon-acc-ok">
+								Аккаунт верифицирован
+							</div>
+							<ul class="profile__companiesList companiesList">
+								<li class="companiesList__item">
+									ООО “информационные технологии”
+								</li>
+								<button class="companiesList__more">
+									+ Еще&nbsp;<span>2</span>
+								</button>
+							</ul>
+							<a href="tel:+79871264825" class="profile__phone">
+								<div class="profile__phone-body">
+									<div class="profile__phone-label">Телефон:</div>
+									<span>+7 (987) 126-48-25</span>
+								</div>
+								<div class="profile__phone-icon _icon-phone"></div>
+							</a>
+							<a href="mailto:A.beckirovich@bars.group" class="profile__email">
+								<div class="profile__email-body">
+									<div class="profile__email-label">Телефон:</div>
+									<span>A.beckirovich@bars.group</span>
+								</div>
+								<div class="profile__email-icon _icon-mail"></div>
+							</a>
+						</div>
+						<ul class="profile__menu">
+							<li class="profile__menu-item">
+								<svg width="20" height="24" viewBox="0 0 20 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+									<path d="M7.5 9C8.32843 9 9 8.32843 9 7.5C9 6.67157 8.32843 6 7.5 6C6.67157 6 6 6.67157 6 7.5C6 8.32843 6.67157 9 7.5 9Z" fill="#B9C3CD" />
+									<path d="M14 7.5C14 8.32843 13.3284 9 12.5 9C11.6716 9 11 8.32843 11 7.5C11 6.67157 11.6716 6 12.5 6C13.3284 6 14 6.67157 14 7.5Z" fill="#B9C3CD" />
+									<path d="M7.28091 11.3753C6.9359 10.944 6.3066 10.8741 5.87534 11.2191C5.44408 11.5641 5.37416 12.1934 5.71917 12.6247C6.87399 14.0682 8.39439 14.875 10 14.875C11.6057 14.875 13.1261 14.0682 14.2809 12.6247C14.6259 12.1934 14.556 11.5641 14.1247 11.2191C13.6935 10.8741 13.0642 10.944 12.7192 11.3753C11.874 12.4318 10.8944 12.875 10 12.875C9.10569 12.875 8.12609 12.4318 7.28091 11.3753Z" fill="#B9C3CD" />
+									<path fill-rule="evenodd" clip-rule="evenodd" d="M7.88664 21.2497C8.72518 22.0883 9 22.625 9 23C9 23.5523 9.44771 24 10 24C10.5523 24 11 23.5523 11 23C11 22.625 11.2748 22.0883 12.1134 21.2497C12.6138 20.7493 13.1888 20.2562 13.8312 19.7055C14.2491 19.3471 14.6956 18.9643 15.1685 18.5391C17.4412 16.496 20 13.7369 20 9.72727C20 4.32627 15.4936 0 10 0C4.50638 0 0 4.32627 0 9.72727C0 13.7369 2.55881 16.496 4.83145 18.5391C5.30441 18.9643 5.75087 19.3471 6.16884 19.7055C6.81112 20.2562 7.3862 20.7493 7.88664 21.2497ZM2 9.72727C2 5.4884 5.55249 2 10 2C14.4475 2 18 5.4884 18 9.72727C18 12.8085 16.0588 15.0494 13.8315 17.0518C13.4435 17.4005 13.0323 17.7539 12.6246 18.1044C11.9285 18.7026 11.2423 19.2923 10.6991 19.8355C10.4598 20.0748 10.2204 20.3304 10 20.6024C9.77957 20.3304 9.54016 20.0748 9.30086 19.8355C8.75766 19.2923 8.07156 18.7026 7.37542 18.1044C6.96767 17.7539 6.55648 17.4005 6.16855 17.0518C3.94119 15.0494 2 12.8085 2 9.72727Z" fill="#B9C3CD" />
+								</svg>
+								<span>Заявки</span>
+							</li>
+							<li class="profile__menu-item">
+								<svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+									<path fill-rule="evenodd" clip-rule="evenodd" d="M10 10C12.7614 10 15 7.76142 15 5C15 2.23858 12.7614 0 10 0C7.23858 0 5 2.23858 5 5C5 7.76142 7.23858 10 10 10ZM10 8C11.6569 8 13 6.65685 13 5C13 3.34315 11.6569 2 10 2C8.34315 2 7 3.34315 7 5C7 6.65685 8.34315 8 10 8Z" fill="#B9C3CD" />
+									<path fill-rule="evenodd" clip-rule="evenodd" d="M6 11C2.68629 11 0 13.6863 0 17V18C0 19.1046 0.895432 20 2 20H18C19.1046 20 20 19.1046 20 18V17C20 13.6863 17.3137 11 14 11H13.0462L10 14.4814L6.95377 11H6ZM2 17C2 14.7909 3.79086 13 6 13H6.04623L10 17.5186L13.9538 13H14C16.2091 13 18 14.7909 18 17V18H2V17Z" fill="#B9C3CD" />
+								</svg>
+								<span>Личные данные</span>
+							</li>
+							<li class="profile__menu-item">
+								<svg width="22" height="16" viewBox="0 0 22 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+									<path d="M5 10C4.44772 10 4 10.4477 4 11C4 11.5523 4.44772 12 5 12H11C11.5523 12 12 11.5523 12 11C12 10.4477 11.5523 10 11 10H5Z" fill="#B9C3CD" />
+									<path fill-rule="evenodd" clip-rule="evenodd" d="M0 3C0 1.34315 1.34315 0 3 0H19C20.6569 0 22 1.34315 22 3V13C22 14.6569 20.6569 16 19 16H3C1.34315 16 0 14.6569 0 13V3ZM3 2C2.44772 2 2 2.44772 2 3V4H20V3C20 2.44772 19.5523 2 19 2H3ZM2 13V6H20V13C20 13.5523 19.5523 14 19 14H3C2.44772 14 2 13.5523 2 13Z" fill="#B9C3CD" />
+								</svg>
+								<span>Сохраненные заявки</span>
+							</li>
+							<li class="profile__menu-item">
+								<svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+									<path d="M23.9769 12.7499H12.3107L4.06154 20.999C6.17706 22.8666 8.95619 23.9999 12 23.9999C18.3755 23.9999 23.5898 19.0279 23.9769 12.7499Z" fill="#B9C3CD" />
+									<path d="M3.00087 19.9384C1.13326 17.8228 0 15.0437 0 11.9999C0 5.62436 4.97195 0.410096 11.25 0.0229492V11.6892L3.00087 19.9384Z" fill="#B9C3CD" />
+									<path d="M12.75 0.0229492V11.2499H23.9769C23.6051 5.21988 18.78 0.394801 12.75 0.0229492Z" fill="#B9C3CD" />
+								</svg>
+								<span>Финансовые новости</span>
+							</li>
+							<li class="profile__menu-item">
+								<svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+									<path d="M0 3C0 1.34315 1.34315 0 3 0H10C11.6569 0 13 1.34315 13 3V7C12.3333 7 11.6667 7 11 7V3C11 2.44772 10.5523 2 10 2H3C2.44772 2 2 2.44772 2 3V17C2 17.5523 2.44772 18 3 18H10C10.5523 18 11 17.5523 11 17V13H13V17C13 18.6569 11.6569 20 10 20H3C1.34315 20 0 18.6569 0 17V3Z" fill="#B9C3CD" />
+									<path d="M5 10C5 9.44771 5.44772 9 6 9L15 9V7.5C15 7.11198 15.2245 6.75899 15.5758 6.59441C15.9272 6.42983 16.3421 6.48337 16.6402 6.73178L19.6347 9.22723C19.8578 9.41063 20 9.68871 20 10C20 10.2503 19.9081 10.479 19.7561 10.6544C19.7273 10.6877 19.6963 10.7191 19.6633 10.7484C19.6536 10.7569 19.6439 10.7653 19.6339 10.7735L16.6402 13.2682C16.3421 13.5166 15.9272 13.5702 15.5758 13.4056C15.2245 13.241 15 12.888 15 12.5V11L6 11C5.44772 11 5 10.5523 5 10Z" fill="#B9C3CD" />
+								</svg>
+								<span>Выход</span>
+							</li>
+						</ul>
+						<div class="profile__links">
+							<a href="javascript:" class="profile__policy">Политика конфиденциальности</a>
+							<a href="javascript:" class="profile__terms">Пользовательское соглашение</a>
+							<button class="profile__feedback">Написать нам</button>
+						</div>
+						<div class="profile__btns">
+							<button class="profile__btn _icon-change-profile">
+								Изменить профиль
+							</button>
+							<button class="profile__btn _icon-change-pass">
+								Сменить пароль
+							</button>
+						</div>
+					</div>
+					<div class="page__body">
+						<div class="personal-area__notification">
+							Пройдите верификацию
+						</div>
+						<div class="personal-area__historyRequests historyRequests">
+							<div class="historyRequests__header">
+								<div class="historyRequests__title _icon-arrow-down">
+									История ваших заявок
+								</div>
+								<a href="javascript:" class="historyRequests__all">Вся история</a>
+							</div>
+							<ul class="historyRequests__list">
+								<li class="historyRequests__item">
+									<div class="historyRequests__item-img">
+										<img src="img/partners/akbars-mini.svg" alt="akbars" />
+									</div>
+									<div class="historyRequests__item-inner">
+										<div class="historyRequests__item-descr">
+											Заявка на оборотный кредит от Ак Барс банка
+										</div>
+										<div class="historyRequests__item-cardInfo">••• 8032</div>
+									</div>
+									<div class="historyRequests__item-money">
+										<div class="historyRequests__item-summa">500 000 ₽</div>
+										<div class="historyRequests__item-resolution positive">
+											Положительно
+										</div>
+									</div>
+								</li>
+								<li class="historyRequests__item">
+									<div class="historyRequests__item-img">
+										<img src="img/partners/akbars-mini.svg" alt="akbars" />
+									</div>
+									<div class="historyRequests__item-inner">
+										<div class="historyRequests__item-descr">
+											Заявка на оборотный кредит от Ак Барс банка
+										</div>
+										<div class="historyRequests__item-cardInfo">••• 8032</div>
+									</div>
+									<div class="historyRequests__item-money">
+										<div class="historyRequests__item-summa">1 000 000 ₽</div>
+										<div class="historyRequests__item-resolution negative">
+											Отрицательно
+										</div>
+									</div>
+								</li>
+							</ul>
+						</div>
+					</div>
+				</div>
+			</div>
+		</main>
+		<footer class="footer">
+			<div class="footer__container">
+				<div class="footer__wrapper">
+					<div class="footer__body">
+						<div class="footer__logo logo">
+							<div class="logo__img">
+								<img data-src="img/logo.svg" alt="logo" />
+							</div>
+							<span class="logo__text">АВАНГАРД-ФИНАНС</span>
+						</div>
+						<div class="footer__descr">
+							Чтобы вам было проще вести бизнес, мы взяли на себя поиск кредитов,
+							гарантий и других финансовых услуг и собрали предложения ведущих
+							банков и организаций развития на одной платформе. Не нужно посещать
+							десятки сайтов. На нашей платформе уже есть продукты разных финансовых
+							организаций. Здесь можно сравнить их и подать заявку.
+						</div>
+						<div class="footer__copyright">©2021 ООО «АВАНГАРД-ФИНАНС»</div>
+						<ul class="footer__links">
+							<li class="footer__links-item">
+								<a href="#" class="footer__links-link">
+									Политика конфиденциальности
+								</a>
+							</li>
+							<li class="footer__links-item">
+								<a href="#" class="footer__links-link">
+									Пользовательское соглашение
+								</a>
+							</li>
+							<li class="footer__links-item">
+								<a href="#" class="footer__links-link"> Карта сайта </a>
+							</li>
+						</ul>
+					</div>
+					<div class="footer__cta">
+						<div class="footer__cta-top">Хотите получить финансирование?</div>
+						<div class="footer__cta-middle">Нажмите на кнопку!</div>
+						<button class="btn">Получить</button>
+					</div>
+					<div data-da=".footer__body,767.98,1" class="footer__menu f-menu">
+						<ul class="f-menu__list">
+							<li class="f-menu__item">
+								<a href="#" class="f-menu__link">Кредиты</a>
+							</li>
+							<li class="f-menu__item">
+								<a href="#" class="f-menu__link">Лизинг</a>
+							</li>
+							<li class="f-menu__item">
+								<a href="#" class="f-menu__link">РКО</a>
+							</li>
+							<li class="f-menu__item">
+								<a href="#" class="f-menu__link">Факторинг</a>
+							</li>
+							<li class="f-menu__item">
+								<a href="#" class="f-menu__link">Гарантии под контракты</a>
+							</li>
+							<li class="f-menu__item">
+								<a href="#" class="f-menu__link">Экспортное страхование</a>
+							</li>
+						</ul>
+						<div data-da=".footer__body,767.98,last" class="footer__phone">
+							Горячая линия АВАНГАРД-ФИНАНС
+							<a href="tel:8800000000000">8 800 000 000 000</a>
+						</div>
+					</div>
+				</div>
+			</div>
+			<img class="footer__img" src="img/finance.svg" alt="finance" />
+		</footer>
+
+	</div>
+	<!-- 
+<div id="popup" aria-hidden="true" class="popup">
+	<div class="popup__wrapper">
+		<div class="popup__content">
+			<button data-close type="button" class="popup__close">Закрыть</button>
+			<div class="popup__text">
+			</div>
+		</div>
+	</div>
+</div>
+ -->
+	<script src="js/app.min.js?_v=20220203230400"></script>
+</body>
+
+</html>

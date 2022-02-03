@@ -31,6 +31,15 @@
 	&__logo {
 		margin-right: 44px;
 	}
+
+	&__inner {
+		display: flex;
+		align-items: center;
+		
+		@media (min-width: $mobile) {
+			display: none;
+		}
+	}
 	/* .header__menu */
 	&__menu {
 		display: none;
@@ -41,6 +50,7 @@
 	}
 	/* .header__panel */
 	&__panel {
+		height: 100%;
 		display: flex;
 		align-items: center;
 	}
@@ -57,28 +67,6 @@
 	}
 	/* .header__auth */
 	&__auth {
-		display: flex;
-		align-items: center;
-		padding: 0 20px;
-		margin-top: 20px;
-		justify-content: center;
-		@media (min-width: $mobile) {
-			padding: 0;
-			margin: 0;
-		}
-		button {
-			font-family: Inter;
-			font-weight: 400;
-		}
-		button:first-child {
-			border: 1px solid rgba(23, 23, 23, 0.12);
-			border-radius: 10px;
-			background: transparent;
-			font-size: 16px;
-			line-height: 125%;
-			color: $mainColor;
-			margin-right: 5px;
-		}
 	}
 	/* .header__btn */
 	&__btn {
@@ -149,11 +137,15 @@
 	}
 	/* .logo__text */
 	&__text {
-		font-family: Inter;
-		white-space: nowrap;
-		font-weight: 700;
-		@include adaptiveValue('font-size', 16, 12);
-		@include adaptiveValue('line-height', 19, 15);
+		display: none;
+		@media (min-width: $mobileSmall) {
+			display: block;
+			font-family: Inter;
+			white-space: nowrap;
+			font-weight: 700;
+			@include adaptiveValue('font-size', 16, 12);
+			@include adaptiveValue('line-height', 19, 15);
+		}
 	}
 }
 .menu {
@@ -392,7 +384,7 @@
 		position: absolute;
 		right: 20px;
 		top: 50%;
-		transform: translateY(-50%);
+		transform: translateY(-50%) rotate(90deg);
 
 		@media (min-width: $mobile) {
 			display: none;
@@ -497,7 +489,7 @@
 		transform: translateX(-50%);
 	}
 
-	&._active {
+	.toggle-open & {
 		display: block;
 	}
 
@@ -671,6 +663,10 @@
 		margin-top: 22px;
 		display: flex;
 		align-items: flex-start;
+		display: none;
+		.home & {
+			display: flex;
+		}
 	}
 	/* .menubar__menu-button */
 	&__menu-button {

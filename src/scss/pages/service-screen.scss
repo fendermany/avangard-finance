@@ -1,0 +1,49 @@
+.page {
+	/* .page__container */
+	&__container {
+	}
+	/* .page__body */
+	&__body {
+	}
+}
+.service-screen {
+	@include adaptiveValue("padding-top", 193, 77);
+	/* .service-screen__img */
+	&__img {
+		margin: 0 auto;
+		@include adaptiveValue("width", 308, 197);
+		img{
+			width: 100%;
+		}
+	}
+	/* .service-screen__title */
+	&__title {
+		margin-top: 28px;
+		font-weight: 600;
+		@include adaptiveValue('font-size', 42, 20);
+		@include adaptiveValue('line-height', 50, 24);
+		text-align: center;
+	}
+	/* .service-screen__descr */
+	&__descr {
+		margin-top: 12px;
+		@include adaptiveValue('font-size', 18, 14);
+		@include adaptiveValue('line-height', 21, 20);
+		text-align: center;
+		color: #b9cbd6;
+		a {
+			text-decoration-line: underline;
+			color: #23c8ca;
+		}
+	}
+	/* .service-screen__btn */
+	&__btn {
+		margin: 19px auto 0 auto;
+		width: 100%;
+		@media (min-width:$mobileSmall){
+			 width: max-content; 
+		}
+	}
+}
+.btn {
+}
