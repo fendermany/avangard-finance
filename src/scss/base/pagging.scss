@@ -6,16 +6,24 @@
 	height: 42px;
 	// .pagging__arrow
 	&__arrow {
-		font-size: 14px;
-		line-height: 125%;
-		height: 100%;
-		@include adaptiveValue('padding-right', 20, 10);
-		@include adaptiveValue('padding-left', 20, 10);
-		border: 1px solid rgba(23, 23, 23, 0.12);
-		border-radius: 10px;
-		display: flex;
-		justify-content: center;
-		align-items: center;
+		display: none;
+		@media (min-width: $mobile) {
+			font-size: 14px;
+			line-height: 125%;
+			height: 100%;
+			@include adaptiveValue('padding-right', 20, 10);
+			@include adaptiveValue('padding-left', 20, 10);
+			border: 1px solid rgba(23, 23, 23, 0.12);
+			border-radius: 10px;
+			display: flex;
+			justify-content: center;
+			align-items: center;
+		}
+		&:hover {
+			background: #f3f5f7;
+			border: 1px solid #78828c;
+			border-radius: 10px;
+		}
 	}
 	// .pagging__list
 	&__list {
@@ -31,14 +39,22 @@
 			a {
 				width: 100%;
 				display: block;
-				@include adaptiveValue('padding-right', 20, 10);
-				@include adaptiveValue('padding-left', 20, 10);
+				padding: 0 20px;
 				height: 100%;
 				display: flex;
 				align-items: center;
-				justify-content: ce
-				nter;
+				justify-content: ce nter;
 			}
+			&._active {
+				background: #f3f5f7;
+				border: 1px solid #78828c;
+				border-radius: 10px;
+			}
+			&:hover {
+			background: #f3f5f7;
+			border: 1px solid #78828c;
+			border-radius: 10px;
+		}
 		}
 		li + li {
 			margin-left: 5px;
@@ -46,7 +62,5 @@
 	}
 	// .pagging__item
 	&__item {
-		&._active {
-		}
 	}
 }

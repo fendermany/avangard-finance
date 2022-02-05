@@ -193,7 +193,7 @@
 		color: rgb(82, 105, 220);
 		border-radius: 10px;
 		position: relative;
-		background: #fff;
+		background: transparent;
 		width: 290px;
 		height: 39px;
 		&::before {
@@ -257,6 +257,7 @@
 	}
 	/* .banks__descr */
 	&__descr {
+		@include adaptiveValue("margin-top", 28, 12);
 		font-weight: 500;
 		font-size: 12px;
 		line-height: 120%;
@@ -268,8 +269,8 @@
 	&__list {
 		@include adaptiveValue('margin-top', 72, 34);
 		display: grid;
-		grid-template: 1fr / 1fr 1fr;
-		gap: 58px;
+		grid-template: 1fr / 1fr 1fr 1fr;
+		@include adaptiveValue("gap", 58, 10);
 		justify-content: center;
 		@media (min-width: $tablet) {
 			grid-template: 1fr / repeat(auto-fit, minmax(376px, 1fr));

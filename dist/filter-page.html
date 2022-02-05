@@ -6,7 +6,7 @@
 	<meta charset="UTF-8">
 	<meta name="format-detection" content="telephone=no">
 	<!-- <style>body{opacity: 0;}</style> -->
-	<link rel="stylesheet" href="css/style.min.css?_v=20220203230400">
+	<link rel="stylesheet" href="css/style.min.css?_v=20220205141713">
 	<link rel="shortcut icon" href="favicon.ico">
 	<!-- <meta name="robots" content="noindex, nofollow"> -->
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -354,7 +354,7 @@
 			</div>
 		</section>
 
-		<main class="page list-aside-template">
+		<main class="page filter-page">
 			<div class="page__container">
 				<div class="page__breadcrumbs breadcrumbs">
 					<ol itemscope itemtype="https://schema.org/BreadcrumbList">
@@ -370,8 +370,11 @@
 						</li>
 					</ol>
 				</div>
-				<h1 class="page__title title">Кредиты для бизнеса</h1>
-				<div class="page__descr description">
+				<h1 class="filter-page__title title">Кредиты для бизнеса</h1>
+				<div class="filter-page__subtitle">
+					Подберите программу лизинга для себя
+				</div>
+				<div class="filter-page__descr">
 					Выгодные условия кредитования малого и среднего бизнеса от ведущих
 					банков России. Здесь вы можете узнать актуальные процентные ставки и
 					оформить кредит для бизнеса по онлайн-заявке.
@@ -381,38 +384,109 @@
 						<path fill-rule="evenodd" clip-rule="evenodd" d="M7.75 6C8.44036 6 9 5.44036 9 4.75C9 4.05964 8.44036 3.5 7.75 3.5C7.05964 3.5 6.5 4.05964 6.5 4.75C6.5 5.44036 7.05964 6 7.75 6ZM7.75 7.5C9.00878 7.5 10.07 6.65425 10.3965 5.5H18.25C18.6642 5.5 19 5.16421 19 4.75C19 4.33579 18.6642 4 18.25 4H10.3965C10.07 2.84575 9.00878 2 7.75 2C6.49122 2 5.42998 2.84575 5.10352 4H3.75C3.33579 4 3 4.33579 3 4.75C3 5.16421 3.33579 5.5 3.75 5.5H5.10352C5.42998 6.65425 6.49122 7.5 7.75 7.5ZM3 11.25C3 10.8358 3.33579 10.5 3.75 10.5H11.1035C11.43 9.34575 12.4912 8.5 13.75 8.5C15.0088 8.5 16.07 9.34575 16.3965 10.5H18.25C18.6642 10.5 19 10.8358 19 11.25C19 11.6642 18.6642 12 18.25 12H16.3965C16.07 13.1543 15.0088 14 13.75 14C12.4912 14 11.43 13.1543 11.1035 12H3.75C3.33579 12 3 11.6642 3 11.25ZM15 11.25C15 11.9404 14.4404 12.5 13.75 12.5C13.0596 12.5 12.5 11.9404 12.5 11.25C12.5 10.5596 13.0596 10 13.75 10C14.4404 10 15 10.5596 15 11.25Z" fill="#37D1D2" />
 						<path fill-rule="evenodd" clip-rule="evenodd" d="M7.75 19C8.44036 19 9 18.4404 9 17.75C9 17.0596 8.44036 16.5 7.75 16.5C7.05964 16.5 6.5 17.0596 6.5 17.75C6.5 18.4404 7.05964 19 7.75 19ZM7.75 20.5C9.00878 20.5 10.07 19.6543 10.3965 18.5H18.25C18.6642 18.5 19 18.1642 19 17.75C19 17.3358 18.6642 17 18.25 17H10.3965C10.07 15.8457 9.00878 15 7.75 15C6.49122 15 5.42998 15.8457 5.10352 17H3.75C3.33579 17 3 17.3358 3 17.75C3 18.1642 3.33579 18.5 3.75 18.5H5.10352C5.42998 19.6543 6.49122 20.5 7.75 20.5Z" fill="#37D1D2" />
 					</svg>
-
 					Показать фильтр
 				</button>
 				<div class="page__wrapper">
-					<div class="page__content content">
-						<nav class="content__topbar topbar">
-							<ul class="topbar__list">
-								<li class="topbar__list-item">
+					<div class="filter-page__content content">
+						<nav class="filter-page__topbar-cars topbar-cars swiper">
+							<div class="topbar-cars__list swiper-wrapper">
+								<button type="button" class="topbar-cars__list-item _active swiper-slide">
+									<div class="topbar-cars__list-item--prop purple">
+										Средний риск
+									</div>
+									<div class="topbar-cars__list-item--img">
+										<img src="img/transport/casual.svg" alt="casual" />
+									</div>
+									<div class="topbar-cars__list-item--name">
+										Легковые автомобили
+									</div>
+								</button>
+								<button type="button" class="topbar-cars__list-item swiper-slide">
+									<div class="topbar-cars__list-item--prop blue">
+										Высокий риск
+									</div>
+									<div class="topbar-cars__list-item--img">
+										<img src="img/transport/commerce.svg" alt="commerce" />
+									</div>
+									<div class="topbar-cars__list-item--name">
+										Коммерческий транспорт
+									</div>
+								</button>
+								<button type="button" class="topbar-cars__list-item swiper-slide">
+									<div class="topbar-cars__list-item--prop blue">
+										Высокий риск
+									</div>
+									<div class="topbar-cars__list-item--img">
+										<img src="img/transport/gruz.svg" alt="gruz" />
+									</div>
+									<div class="topbar-cars__list-item--name">
+										Грузовые автомобили
+									</div>
+								</button>
+								<button type="button" class="topbar-cars__list-item swiper-slide">
+									<div class="topbar-cars__list-item--prop blue">
+										Высокий риск
+									</div>
+									<div class="topbar-cars__list-item--img">
+										<img src="img/transport/special.svg" alt="special" />
+									</div>
+									<div class="topbar-cars__list-item--name">
+										Специальная техника
+									</div>
+								</button>
+								<button type="button" class="topbar-cars__list-item swiper-slide">
+									<div class="topbar-cars__list-item--prop green">
+										Низкий риск
+									</div>
+									<div class="topbar-cars__list-item--img">
+										<img src="img/transport/tech.svg" alt="tech" />
+									</div>
+									<div class="topbar-cars__list-item--name">Оборудование</div>
+								</button>
+								<button type="button" class="topbar-cars__list-item swiper-slide">
+									<div class="topbar-cars__list-item--prop purple">
+										Средний риск
+									</div>
+									<div class="topbar-cars__list-item--img">
+										<img src="img/transport/bu.svg" alt="bu" />
+									</div>
+									<div class="topbar-cars__list-item--name">
+										Б/у автомобили
+									</div>
+								</button>
+							</div>
+							<div class="topbar-cars__arrows">
+								<button type="button" class="topbar-cars-prev _icon-arrow-right"></button>
+								<button type="button" class="topbar-cars-next _icon-arrow-right"></button>
+							</div>
+						</nav>
+						<nav class="filter-page__topbar topbar">
+							<div class="topbar__list">
+								<button type="button" class="topbar__list-item _active">
 									<img src="img/molniya.svg" alt="Пополнение оборотных средств" />
 									<span>Пополнение оборотных средств</span>
-								</li>
-								<li class="topbar__list-item">
+								</button>
+								<button type="button" class="topbar__list-item">
 									<img src="img/star.svg" alt="Без залога" />
 									<span>Без залога</span>
-								</li>
-								<li class="topbar__list-item">
+								</button>
+								<button type="button" class="topbar__list-item">
 									<img src="img/molniya.svg" alt="Для ИП" />
 									<span>Для ИП</span>
-								</li>
-								<li class="topbar__list-item">
+								</button>
+								<button type="button" class="topbar__list-item">
 									<img src="img/molniya.svg" alt="Для ООО" />
 									<span>Для ООО</span>
-								</li>
-								<li class="topbar__list-item">
+								</button>
+								<button type="button" class="topbar__list-item">
 									<img src="img/krugovorot.svg" alt="Займы для бизнеса" />
 									<span>Займы для бизнеса</span>
-								</li>
-								<li class="topbar__list-item">
+								</button>
+								<button type="button" class="topbar__list-item">
 									<img src="img/star.svg" alt="Под залог недвижимости" />
 									<span>Под залог недвижимости</span>
-								</li>
-							</ul>
+								</button>
+							</div>
 						</nav>
 						<ul class="content__body banks-list">
 							<li class="banks-list__item">
@@ -671,8 +745,8 @@
 						<div class="pagging">
 							<a href="javascript:" class="pagging__arrow">Назад</a>
 							<ul class="pagging__list">
-								<li>
-									<a href="javascript:" class="pagging__item _active">1</a>
+								<li class="_active">
+									<a href="javascript:" class="pagging__item">1</a>
 								</li>
 								<li>
 									<a href="javascript:" class="pagging__item">2</a>
@@ -1104,18 +1178,43 @@
 		</footer>
 
 	</div>
-	<!-- 
-<div id="popup" aria-hidden="true" class="popup">
-	<div class="popup__wrapper">
-		<div class="popup__content">
-			<button data-close type="button" class="popup__close">Закрыть</button>
-			<div class="popup__text">
+	<div id="popup__changePassword" aria-hidden="true" class="popup changePassword">
+		<div class="popup__wrapper">
+			<div class="popup__content">
+				<div class="changePassword__top">
+					<div class="changePassword__title _icon-change-pass">
+						Сменить пароль
+					</div>
+					<button data-close type="button" class="popup__close">
+						<img src="img/close.svg" alt="close" />
+					</button>
+				</div>
+				<form data-dev method="POST" action="#" class="changePassword__body">
+					<div class="form__line">
+						<label for="oldpassword">Старый пароль</label>
+						<input autocomplete="off" type="text" name="oldpassword" data-error="Введите старый пароль" placeholder="" class="input" />
+					</div>
+					<div class="form__line">
+						<label for="newpassword">Новый пароль</label>
+						<input autocomplete="off" type="text" name="newpassword" data-error="Введите новый пароль" placeholder="" class="input" />
+					</div>
+					<div class="form__line">
+						<label for="repeatpassword">Новый пароль</label>
+						<input autocomplete="off" type="text" name="repeatpassword" data-error="Введите пароль еще раз" placeholder="" class="input" />
+					</div>
+					<span>
+						Пароль должен быть не менее 10 символов и содержать в себе латинские
+						символы, цифры, и хотя бы один из специальных символов (!$#%).
+					</span>
+					<div class="changePassword__btns">
+						<button type="submit" class="button">Сменить пароль</button>
+						<button data-close type="submit" class="button">Не менять</button>
+					</div>
+				</form>
 			</div>
 		</div>
 	</div>
-</div>
- -->
-	<script src="js/app.min.js?_v=20220203230400"></script>
+	<script src="js/app.min.js?_v=20220205141713"></script>
 </body>
 
 </html>

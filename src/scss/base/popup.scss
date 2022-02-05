@@ -1,5 +1,5 @@
 body::after {
-	content: "";
+	content: '';
 	background-color: rgba(0, 0, 0, 0.5);
 	position: fixed;
 	width: 100%;
@@ -57,5 +57,139 @@ body.popup-show::after {
 	border-radius: 20px;
 	.lock & {
 		visibility: visible;
+	}
+}
+
+.changePassword {
+	&__top {
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		@media (min-width: $mobile) {
+			justify-content: space-between;
+		}
+	}
+	/* .changePassword__title */
+	&__title {
+		font-weight: 600;
+		font-size: 18px;
+		line-height: 21px;
+		text-align: center;
+		color: #1f2428;
+		&::before {
+			display: none;
+		}
+		@media (min-width: $mobile) {
+			display: flex;
+			align-items: center;
+			font-family: Inter;
+			font-size: 17px;
+			line-height: 22px;
+			&::before {
+				display: block;
+				font-size: 24px;
+				margin-right: 25px;
+			}
+		}
+	}
+	/* .changePassword__body */
+	&__body {
+		margin-top: 16px;
+		span {
+			margin-top: 16px;
+			font-family: Inter;
+			font-size: 12px;
+			line-height: 15px;
+			color: #6f6f8b;
+			display: block;
+		}
+	}
+	.popup {
+		/* .popup__wrapper */
+		&__wrapper {
+		}
+		/* .popup__content */
+		&__content {
+			@include adaptiveValue('width', 422, 301);
+			padding: 32px 40px;
+			position: relative;
+			background: #f9f9fa;
+			box-shadow: 0px 13px 33px -6px rgba(0, 0, 0, 0.07);
+			border-radius: 20px;
+		}
+		/* .popup__close */
+		&__close {
+			border: 1px solid #e8e9eb;
+			box-sizing: border-box;
+			border-radius: 12px;
+			justify-content: center;
+			align-items: center;
+			width: 32px;
+			height: 32px;
+			outline: none;
+			img {
+				width: 16px;
+				height: 16px;
+			}
+			display: none;
+			@media (min-width: $mobile) {
+				display: flex;
+			}
+		}
+	}
+	.form {
+		/* .form__line */
+		&__line {
+			label {
+				font-family: Inter;
+				font-size: 14px;
+				line-height: 17px;
+				color: #6f6f8b;
+			}
+			& + .form__line {
+				margin-top: 16px;
+			}
+		}
+	}
+	.input {
+		margin-top: 4px;
+		padding: 0 12px;
+		border: 2px solid #e8e9eb;
+		border-radius: 8px;
+		height: 46px;
+	}
+	.button {
+		margin-top: 16px;
+		border-radius: 10px;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		padding: 4px 12px;
+		height: 46px;
+		width: 100%;
+		background: #24cfcf;
+		color: #fff;
+		font-weight: 500;
+		font-size: 16px;
+		line-height: 24px;
+		@media (min-width: $mobile) {
+			height: 40px;
+			background: #d4eff0;
+			font-size: 13px;
+			line-height: 150%;
+			color: #21bcc2;
+		}
+		&:last-child {
+			background: #e8e9eb;
+			border-radius: 8px;
+			font-weight: 500;
+			font-size: 16px;
+			line-height: 22px;
+			color: #8a8aa0;
+			margin-top: 8px;
+			@media (min-width: $mobile) {
+				display: none;
+			}
+		}
 	}
 }

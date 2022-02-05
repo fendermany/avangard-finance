@@ -142,7 +142,6 @@ body {
 @import 'blocks/text';
 @import 'blocks/dontknow';
 
-
 // Тёмные режим
 @import 'blocks/darkmode';
 
@@ -155,8 +154,10 @@ body {
 // Подключение стилей отдельных страниц
 @import 'home';
 
-
-@import 'pages/list-aside-template';
+@import 'pages/filter-page';
 @import 'pages/banks';
 @import 'pages/service-screen';
 @import 'pages/personal-area';
+@import 'pages/blog';
+@import 'pages/about';
+@import 'pages/services';

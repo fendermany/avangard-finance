@@ -1,11 +1,57 @@
-<!-- 
-<div id="popup" aria-hidden="true" class="popup">
+<div id="popup__changePassword" aria-hidden="true" class="popup changePassword">
 	<div class="popup__wrapper">
 		<div class="popup__content">
-			<button data-close type="button" class="popup__close">Закрыть</button>
-			<div class="popup__text">
+			<div class="changePassword__top">
+				<div class="changePassword__title _icon-change-pass">
+					Сменить пароль
+				</div>
+				<button data-close type="button" class="popup__close">
+					<img src="@img/close.svg" alt="close" />
+				</button>
 			</div>
+			<form data-dev method="POST" action="#" class="changePassword__body">
+				<div class="form__line">
+					<label for="oldpassword">Старый пароль</label>
+					<input
+						autocomplete="off"
+						type="text"
+						name="oldpassword"
+						data-error="Введите старый пароль"
+						placeholder=""
+						class="input"
+					/>
+				</div>
+				<div class="form__line">
+					<label for="newpassword">Новый пароль</label>
+					<input
+						autocomplete="off"
+						type="text"
+						name="newpassword"
+						data-error="Введите новый пароль"
+						placeholder=""
+						class="input"
+					/>
+				</div>
+				<div class="form__line">
+					<label for="repeatpassword">Новый пароль</label>
+					<input
+						autocomplete="off"
+						type="text"
+						name="repeatpassword"
+						data-error="Введите пароль еще раз"
+						placeholder=""
+						class="input"
+					/>
+				</div>
+				<span>
+					Пароль должен быть не менее 10 символов и содержать в себе латинские
+					символы, цифры, и хотя бы один из специальных символов (!$#%).
+				</span>
+				<div class="changePassword__btns">
+					<button type="submit" class="button">Сменить пароль</button>
+					<button data-close type="submit" class="button">Не менять</button>
+				</div>
+			</form>
 		</div>
 	</div>
 </div>
- -->

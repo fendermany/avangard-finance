@@ -451,6 +451,7 @@
 		}
 		/* .editProfile__list-item--input */
 		&__list-item--input {
+			background: transparent;
 			@include adaptiveValue('font-size', 18, 15);
 			@include adaptiveValue('line-height', 21, 18);
 			width: 100%;

@@ -1,5 +1,5 @@
 .banks-list {
-	@include adaptiveValue('margin-top', 48, 36);
+	@include adaptiveValue('margin-top', 28, 16);
 	display: grid;
 	grid-template: 1fr / 1fr;
 	grid-auto-rows: 1fr;

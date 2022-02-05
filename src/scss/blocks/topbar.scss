@@ -10,6 +10,7 @@
 .topbar {
 	display: flex;
 	align-items: flex-start;
+	height: 82px;
 	/* .topbar__list */
 	&__list {
 		display: flex;
@@ -18,13 +19,16 @@
 		overflow-y: hidden;
 		touch-action: auto;
 		padding: 20px;
-		li + li {
+		position: absolute;
+    width: 100%;
+		@extend %hidescroll;
+		& > * + * {
 			margin-left: 20px;
 		}
 		/* width */
 		&::-webkit-scrollbar {
-			width: 2px;
-			height: 2px;
+			width: 0;
+			height: 0;
 		}
 
 		/* Track */
@@ -60,5 +64,121 @@
 		& > * + * {
 			margin-left: 7px;
 		}
+		&._active{
+			border: 1px solid #24CFCF;
+		}
+	}
+}
+
+.filter-page {
+	/* .filter-page__topbar-cars */
+	&__topbar-cars {
+		@include adaptiveValue('margin-top', 52, 20);
+	}
+}
+.topbar-cars {
+	height: 124px;
+	/* .topbar-cars__list */
+	&__list {
+		display: flex;
+		align-items: center;
+		position: absolute !important;
+	}
+	/* .topbar-cars__list-item */
+	&__list-item {
+		background: #ffffff;
+		box-shadow: 0px 12px 16px rgba(0, 0, 0, 0.08);
+		border-radius: 8px;
+		width: 109px;
+		height: 124px;
+		position: relative;
+		padding: 12px;
+		&._active{
+			border: 2px solid #24CFCF;
+		}
+	}
+	/* .topbar-cars__list-item--prop */
+	&__list-item--prop {
+		position: absolute;
+		right: -5px;
+		top: -10px;
+		box-shadow: 0px 6px 22px rgba(157, 167, 183, 0.39);
+		border-radius: 16px;
+		padding: 0 8px;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		width: max-content;
+		color: #fff;
+		font-size: 11px;
+		line-height: 12px;
+		height: 20px;
+		&.purple {
+			background: linear-gradient(135deg, #c48aff 0%, #aa65f0 100%);
+		}
+		&.blue {
+			background: linear-gradient(135deg, #70b2ff 0%, #5c9ce6 100%);
+		}
+		&.green {
+			background: linear-gradient(135deg, #50c750 0%, #32b332 100%);
+		}
+	}
+	/* .topbar-cars__list-item--img */
+	&__list-item--img {
+		height: 30px;
+		text-align: left;
+		img {
+			height: 100%;
+		}
+	}
+	/* .topbar-cars__list-item--name */
+	&__list-item--name {
+		margin-top: 20px;
+		font-weight: 500;
+		font-size: 10px;
+		line-height: 12px;
+		color: #011638;
+		text-align: left;
+	}
+}
+
+.topbar-cars__arrows{
+	position: relative;
+	top: 50%;
+	transform: translateY(-50%);
+	display: flex;
+	justify-content: space-between;
+}
+
+.topbar-cars-prev {
+	width: 36px;
+	height: 36px;
+	display: inline-flex;
+	justify-content: center;
+	align-items: center;
+	border-radius: 50%;
+	background-color: #F4F4F4;
+	left: 0;
+	&.swiper-button-disabled{
+		visibility: hidden;
+		pointer-events: none;
+	}
+	&::before{
+		transform: rotate(180deg);
+	}
+}
+
+.topbar-cars-next {
+	width: 36px;
+	height: 36px;
+	display: inline-flex;
+	justify-content: center;
+	align-items: center;
+	border-radius: 50%;
+	background-color: #F4F4F4;
+	right: 0;
+	&.swiper-button-disabled{
+		visibility: hidden;
+		pointer-events: none;
 	}
 }
