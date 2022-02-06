@@ -23,6 +23,13 @@
 		align-items: center;
 		position: relative;
 		gap: 10px;
+		color: $olive;
+		font-family: Inter;
+		@include adaptiveValue('font-size', 14, 10);
+		line-height: 125%;
+		span {
+			color: $mainColor;
+		}
 		&:before {
 			content: '';
 			align-self: flex-start;

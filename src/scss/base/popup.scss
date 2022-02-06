@@ -26,7 +26,7 @@ body.popup-show::after {
 	pointer-events: none;
 }
 .popup_show {
-	z-index: 150;
+	z-index: 1002;
 	visibility: visible;
 	overflow: auto;
 	pointer-events: auto;
@@ -50,10 +50,12 @@ body.popup-show::after {
 	visibility: hidden;
 	transform: scale(0);
 	transition: transform 0.3s ease 0s;
-	background-color: #eee;
-	padding: 20px;
 	width: 100%;
-	max-width: 900px;
+	border-radius: 20px;
+	padding: 32px 40px;
+	position: relative;
+	background: #f9f9fa;
+	box-shadow: 0px 13px 33px -6px rgba(0, 0, 0, 0.07);
 	border-radius: 20px;
 	.lock & {
 		visibility: visible;
@@ -111,11 +113,6 @@ body.popup-show::after {
 		/* .popup__content */
 		&__content {
 			@include adaptiveValue('width', 422, 301);
-			padding: 32px 40px;
-			position: relative;
-			background: #f9f9fa;
-			box-shadow: 0px 13px 33px -6px rgba(0, 0, 0, 0.07);
-			border-radius: 20px;
 		}
 		/* .popup__close */
 		&__close {
@@ -189,6 +186,498 @@ body.popup-show::after {
 			margin-top: 8px;
 			@media (min-width: $mobile) {
 				display: none;
+			}
+		}
+	}
+}
+
+.registration {
+	padding: 0;
+
+	@media (min-width: $mobile) {
+		padding: 30px 10px;
+	}
+	.popup {
+		/* .popup__wrapper */
+		&__wrapper {
+			height: 100%;
+			@media (min-width: $mobile) {
+				height: auto;
+			}
+		}
+		/* .popup__content */
+		&__content {
+			position: relative;
+		}
+
+		&__close {
+			position: absolute;
+			top: 20px;
+			right: 20px;
+			border: 1px solid #e8e9eb;
+			box-sizing: border-box;
+			border-radius: 12px;
+			justify-content: center;
+			align-items: center;
+			width: 32px;
+			height: 32px;
+			outline: none;
+			display: flex;
+			z-index: 1000;
+			img {
+				width: 16px;
+				height: 16px;
+			}
+		}
+	}
+	/* .registration__pc */
+	&__pc {
+		display: none;
+		width: 100%;
+		@media (min-width: $mobile) {
+			display: block;
+		}
+		.popup {
+			/* .popup__content */
+			&__content {
+				background: #ffffff;
+				max-width: 1134px;
+				margin: 0 auto;
+			}
+		}
+		.registration {
+			/* .registration__title */
+			&__title {
+				font-weight: 600;
+				font-size: 32px;
+				line-height: 38px;
+				text-align: center;
+			}
+			/* .registration__descr */
+			&__descr {
+				margin: 8px auto 0 auto;
+				font-size: 16px;
+				line-height: 19px;
+				text-align: center;
+				color: #8a8aa0;
+				max-width: 530px;
+			}
+			/* .registration__form */
+			&__form {
+				margin-top: 32px;
+			}
+		}
+		.form {
+			/* .form__row */
+			&__row {
+			}
+			/* .form__column */
+			&__column {
+			}
+			/* .form__line */
+			&__line {
+				label {
+					font-weight: 600;
+					font-size: 20px;
+					line-height: 24px;
+					margin-bottom: 12px;
+				}
+			}
+			/* .form__btns */
+			&__btns {
+				margin-top: 20px;
+			}
+		}
+		.input {
+			background: #ffffff;
+			box-shadow: 0px 2px 3px rgba(0, 0, 0, 0.03);
+			border-radius: 4px;
+			border: none;
+		}
+		.checkbox {
+			margin-top: 20px;
+			/* .checkbox__input */
+			&__input {
+			}
+			/* .checkbox__label */
+			&__label {
+			}
+			/* .checkbox__text */
+			&__text {
+			}
+		}
+		.button {
+			background: #f7f8f9;
+			border-radius: 8px;
+			font-size: 17px;
+			line-height: 22px;
+			color: #8a8aa0;
+			width: 100%;
+			height: 46px;
+			@media (any-hover: hover) {
+				&:hover {
+					box-shadow: 0px 5px 27px -2px rgba(34, 60, 80, 0.27);
+				}
+			}
+			&:last-child {
+				margin-top: 20px;
+				background: #d4eff0;
+				color: #21bcc2;
+				font-size: 16px;
+				line-height: 150%;
+			}
+		}
+	}
+	/* .registration__mobile */
+	&__mobile {
+		height: 100%;
+		width: 100%;
+		display: block;
+		position: relative;
+
+		@media (min-width: $mobile) {
+			display: none;
+		}
+		.popup {
+			/* .popup__content */
+			&__content {
+				padding-top: 56px;
+				border-radius: 0;
+				width: 100%;
+				height: 100%;
+				@media (min-width: $mobile) {
+					border-radius: 20px;
+				}
+			}
+		}
+		.registration {
+			/* .registration__mobile-1 */
+			&__mobile-1 {
+			}
+			/* .registration__logo */
+			&__logo {
+			}
+			/* .registration__mobile-pagination */
+			&__mobile-pagination {
+				margin-top: 36px;
+				display: flex;
+				justify-content: center;
+				align-items: center;
+				& > * + * {
+					margin-left: 8px;
+				}
+				span {
+					display: block;
+					width: 12px;
+					height: 12px;
+					background: #ebebeb;
+					border-radius: 50%;
+					&._active {
+						background: $olive;
+					}
+				}
+			}
+			/* .registration__title */
+			&__title {
+				margin-top: 24px;
+				font-family: Inter;
+				font-weight: 700;
+				font-size: 24px;
+				line-height: 29px;
+				text-align: center;
+			}
+			/* .registration__descr */
+			&__descr {
+				max-width: 343px;
+				margin: 8px auto 0 auto;
+				font-family: Inter;
+				font-size: 14px;
+				line-height: 17px;
+				text-align: center;
+				color: #8a8aa0;
+			}
+			/* .registration__form */
+			&__form {
+				margin-top: 24px;
+			}
+			/* .registration__mobile-2 */
+			&__mobile-2 {
+				display: none;
+				.form__btns {
+					margin-top: 24px;
+					.btn {
+						width: 100%;
+						height: 46px;
+						border-radius: 8px;
+
+						&:first-child {
+							background: #e8e9eb;
+							font-size: 17px;
+							line-height: 22px;
+							color: #8a8aa0;
+						}
+						&:last-child {
+							margin-top: 12px;
+							background: #d4eff0;
+							font-size: 16px;
+							line-height: 150%;
+							color: #21bcc2;
+						}
+					}
+				}
+			}
+		}
+		.popup {
+			/* .popup__content */
+			&__content {
+			}
+		}
+		.logo {
+			justify-content: center;
+			/* .logo__img */
+			&__img {
+			}
+			/* .logo__text */
+			&__text {
+				@include adaptiveValue('font-size', 20, 18);
+				line-height: 24px;
+				display: block;
+				font-weight: 700;
+			}
+		}
+
+		.form {
+			/* .form__line */
+			&__line {
+				label {
+					font-family: Inter;
+					font-size: 14px;
+					line-height: 17px;
+					color: #6f6f8b;
+					margin-bottom: 4px;
+				}
+				& + .form__line {
+					margin-top: 16px;
+				}
+				& + .btn {
+					margin-top: 24px;
+					width: 100%;
+				}
+			}
+
+			/* .form__btns */
+			&__btns {
+			}
+		}
+		.input {
+		}
+		.btn {
+		}
+		.checkbox {
+			margin-top: 20px;
+			/* .checkbox__input */
+			&__input {
+			}
+			/* .checkbox__label */
+			&__label {
+			}
+			/* .checkbox__text */
+			&__text {
+			}
+		}
+	}
+}
+
+.authorization,
+.emailAccept {
+	padding: 0;
+
+	@media (min-width: $mobile) {
+		padding: 30px 10px;
+	}
+	.popup {
+		/* .popup__wrapper */
+		&__wrapper {
+			height: 100%;
+			@media (min-width: $mobile) {
+				height: auto;
+			}
+		}
+		/* .popup__content */
+		&__content {
+			background: #fff;
+			height: 100%;
+			width: 100%;
+			display: block;
+			padding-top: 56px;
+			border-radius: 0;
+			position: relative;
+			@media (min-width: $mobile) {
+				max-width: 600px;
+				border-radius: 20px;
+				height: auto;
+			}
+		}
+		&__close {
+			position: absolute;
+			top: 20px;
+			right: 20px;
+			border: 1px solid #e8e9eb;
+			box-sizing: border-box;
+			border-radius: 12px;
+			justify-content: center;
+			align-items: center;
+			width: 32px;
+			height: 32px;
+			outline: none;
+			display: flex;
+			img {
+				width: 16px;
+				height: 16px;
+			}
+		}
+	}
+	/* .authorization__logo */
+	&__logo {
+	}
+	/* .authorization__img */
+	&__img {
+		display: none;
+		@media (min-width: $mobile) {
+			display: block;
+			width: 72px;
+			height: 72px;
+			background: #eff2f4;
+			border-radius: 10px;
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			margin: 0 auto;
+			&::before {
+				font-size: 34px;
+			}
+		}
+	}
+	/* .authorization__title */
+	&__title {
+		margin-top: 36px;
+		font-weight: 600;
+		font-size: 24px;
+		line-height: 29px;
+		text-align: center;
+		@media (min-width: $mobile) {
+			margin-top: 24px;
+		}
+	}
+	/* .authorization__descr */
+	&__descr {
+		margin-top: 8px;
+		font-size: 14px;
+		line-height: 17px;
+		text-align: center;
+		color: #8a8aa0;
+	}
+	/* .authorization__body */
+	&__body {
+		margin-top: 24px;
+	}
+
+	&__repeat {
+		margin-top: 16px;
+		font-size: 14px;
+		line-height: 17px;
+		color: #8a8aa0;
+		text-align: left;
+		@media (min-width: $mobile) {
+			text-align: center;
+		}
+	}
+	.logo {
+		display: flex;
+		justify-content: center;
+		@media (min-width: $mobile) {
+			display: none;
+		}
+		/* .logo__img */
+		&__img {
+		}
+		/* .logo__text */
+		&__text {
+			display: block;
+			@include adaptiveValue('font-size', 20, 18);
+			line-height: 24px;
+			font-weight: 700;
+		}
+	}
+	.form {
+		/* .form__line */
+		&__line {
+			label {
+				font-size: 14px;
+				line-height: 17px;
+				color: #6f6f8b;
+				margin-bottom: 4px;
+			}
+			& + .form__line {
+				margin-top: 16px;
+			}
+		}
+		/* .form__restorePassword */
+		&__restorePassword {
+			margin: 12px 0 0 auto;
+			font-size: 17px;
+			line-height: 22px;
+			color: #21bcc2;
+			text-align: right;
+			display: block;
+		}
+		/* .form__btns */
+		&__btns {
+			margin-top: 24px;
+		}
+	}
+	.input {
+		border: 2px solid #e8e9eb;
+		border-radius: 8px;
+		padding: 12px;
+		height: 46px;
+	}
+	.button {
+		background: #f7f8f9;
+		border-radius: 8px;
+		font-size: 17px;
+		line-height: 22px;
+		color: #8a8aa0;
+		width: 100%;
+		height: 46px;
+		@media (any-hover: hover) {
+			&:hover {
+				box-shadow: 0px 5px 27px -2px rgba(34, 60, 80, 0.27);
+			}
+		}
+		&:nth-child(2) {
+			margin-top: 20px;
+			background: #d4eff0;
+			color: #21bcc2;
+			font-size: 16px;
+			line-height: 150%;
+		}
+	}
+}
+
+.video {
+	.popup {
+		/* .popup__wrapper */
+		&__wrapper {
+		}
+		/* .popup__content */
+		&__content {
+			max-width: 1024px;
+			@include adaptiveValue("height", 600, 350);
+			padding: 0;
+			iframe{
+				width: 100%;
+				height: 100%;
 			}
 		}
 	}

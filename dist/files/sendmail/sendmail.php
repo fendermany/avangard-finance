@@ -11,14 +11,14 @@
 	$mail->IsHTML(true);
 
 	//От кого письмо
-	$mail->setFrom('info@fls.guru', 'Фрилансер по жизни');
+	$mail->setFrom('info@avangardfinance.ru', 'Avangard-finance');
 	//Кому отправить
-	$mail->addAddress('code@fls.guru');
+	$mail->addAddress('');
 	//Тема письма
-	$mail->Subject = 'Привет! Это "Фрилансер по жизни"';
+	$mail->Subject = 'Сообщение с сайта Avangard-finance"';
 
 	//Тело письма
-	$body = '<h1>Встречайте супер письмо!</h1>';
+	$body = '<h1>Новая заявка с сайта!</h1>';
 
 	//if(trim(!empty($_POST['name']))){
 		//$body.='';

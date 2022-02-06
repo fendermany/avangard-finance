@@ -2,9 +2,9 @@
 	<div class="header__body">
 		<div class="header__top">
 			<div class="header__container">
-				<a class="header__logo logo" href="/home">
+				<a class="header__logo logo" href="/home.html">
 					<div class="logo__img">
-						<img data-src="@img/logo.svg" alt="logo" />
+						<img class="_lazy" data-src="@img/logo.svg" alt="logo" />
 					</div>
 					<span class="logo__text">АВАНГАРД-ФИНАНС</span>
 				</a>
@@ -27,7 +27,11 @@
 							<li class="menu__item">
 								<a href="#" class="menu__link">Экспортное страхование</a>
 							</li>
-							<img src="@img/arrow-right.svg" alt="arrow-right" />
+							<img
+								class="_lazy"
+								data-src="@img/arrow-right.svg"
+								alt="arrow-right"
+							/>
 						</ul>
 					</nav>
 				</div>
@@ -47,12 +51,24 @@
 					</div>
 					<div data-da=".header__inner,767.98,first" class="header__auth auth">
 						<div class="auth__offline">
-							<button type="button" class="header__btn btn">Регистрация</button>
-							<button type="button" class="header__btn btn">Вход</button>
+							<button
+								data-popup="#popup__registration"
+								type="button"
+								class="header__btn btn"
+							>
+								Регистрация
+							</button>
+							<button
+								data-popup="#popup__authorization"
+								type="button"
+								class="header__btn btn"
+							>
+								Вход
+							</button>
 						</div>
 						<div class="auth__online">
 							<div class="auth__img">
-								<img src="@img/thumbnail.svg" alt="you" />
+								<img class="_lazy" data-src="@img/thumbnail.svg" alt="you" />
 							</div>
 							<div class="auth__inner">
 								<div class="auth__name">Михаил Николаевич Якутин</div>

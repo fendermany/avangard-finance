@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html lang="ru">
-	@@include('html/_head.htm',{ "title":"Заявки" })
+	@@include('html/_head.htm',{ "title":"Персональная зона - Заявки" })
 	<body>
 		<div class="wrapper home">
 			@@include('html/_header.htm',{})
@@ -36,7 +36,11 @@
 								<div class="profile__section">Личный кабинет</div>
 								<div class="profile__inner">
 									<div class="profile__img">
-										<img src="@img/profile-img.png" alt="profile-img" />
+										<img
+											class="_lazy"
+											data-src="@img/profile-img.png"
+											alt="profile-img"
+										/>
 									</div>
 									<div class="profile__name">Руслан Бекирович</div>
 								</div>
@@ -199,13 +203,19 @@
 								<button class="profile__btn _icon-change-profile">
 									Изменить профиль
 								</button>
-								<button class="profile__btn _icon-change-pass">
+								<button
+									data-popup="#popup__changePassword"
+									class="profile__btn _icon-change-pass"
+								>
 									Сменить пароль
 								</button>
 							</div>
 						</div>
 						<div class="page__body">
-							<div class="personal-area__notification">
+							<div
+								data-popup="#popup__emailAccept"
+								class="personal-area__notification"
+							>
 								Пройдите верификацию
 							</div>
 							<div class="personal-area__historyRequests historyRequests">
@@ -220,7 +230,11 @@
 								<ul class="historyRequests__list">
 									<li class="historyRequests__item">
 										<div class="historyRequests__item-img">
-											<img src="@img/partners/akbars-mini.svg" alt="akbars" />
+											<img
+												class="_lazy"
+												data-src="@img/partners/akbars-mini.svg"
+												alt="akbars"
+											/>
 										</div>
 										<div class="historyRequests__item-inner">
 											<div class="historyRequests__item-descr">
@@ -237,7 +251,11 @@
 									</li>
 									<li class="historyRequests__item">
 										<div class="historyRequests__item-img">
-											<img src="@img/partners/akbars-mini.svg" alt="akbars" />
+											<img
+												class="_lazy"
+												data-src="@img/partners/akbars-mini.svg"
+												alt="akbars"
+											/>
 										</div>
 										<div class="historyRequests__item-inner">
 											<div class="historyRequests__item-descr">

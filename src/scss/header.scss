@@ -226,7 +226,6 @@
 		margin-bottom: 6px;
 		overflow-y: auto;
 		overflow-x: hidden;
-		max-height: 250px;
 
 		/* width */
 		&::-webkit-scrollbar {
@@ -468,12 +467,12 @@
 
 	/* Track */
 	&::-webkit-scrollbar-track {
-		background: $olive;
+		background: #fff;
 	}
 
 	/* Handle */
 	&::-webkit-scrollbar-thumb {
-		background: #fff;
+		background: $olive;
 		border-radius: 10px;
 	}
 
@@ -666,6 +665,7 @@
 		display: flex;
 		align-items: flex-start;
 		display: none;
+		height: 39px;
 		.home & {
 			display: flex;
 		}
@@ -690,31 +690,36 @@
 		overflow-y: hidden;
 		touch-action: auto;
 		padding-bottom: 7px;
+		position: absolute;
+		left: 63px;
+		width: 100%;
+		padding: 0 70px 0 0;
+		@extend %hidescroll;
 
 		& > * + * {
 			margin-left: 8px;
 		}
-		/* width */
-		&::-webkit-scrollbar {
-			width: 2px;
-			height: 2px;
-		}
+		// /* width */
+		// &::-webkit-scrollbar {
+		// 	width: 2px;
+		// 	height: 2px;
+		// }
 
-		/* Track */
-		&::-webkit-scrollbar-track {
-			background: #f1f1f1;
-		}
+		// /* Track */
+		// &::-webkit-scrollbar-track {
+		// 	background: #f1f1f1;
+		// }
 
-		/* Handle */
-		&::-webkit-scrollbar-thumb {
-			background: $olive;
-			border-radius: 10px;
-		}
+		// /* Handle */
+		// &::-webkit-scrollbar-thumb {
+		// 	background: $olive;
+		// 	border-radius: 10px;
+		// }
 
-		/* Handle on hover */
-		&::-webkit-scrollbar-thumb:hover {
-			background: #555;
-		}
+		// /* Handle on hover */
+		// &::-webkit-scrollbar-thumb:hover {
+		// 	background: #555;
+		// }
 	}
 	/* .menubar__menu-item */
 	&__menu-item {

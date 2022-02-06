@@ -8,7 +8,7 @@
 		grid-template: 1fr / 1fr 1fr;
 	}
 	@media (min-width: em(1200)) {
-		grid-template: 1fr / 1fr;
+		grid-template: 1fr / 1fr !important;
 	}
 	&__item {
 		background: #f3f5f7;
@@ -94,7 +94,7 @@
 			position: absolute;
 			top: 50%;
 			transform: translateY(-50%);
-			background: url('../img/li.svg') no-repeat center center/cover;
+			background: url('@img/li.svg') no-repeat center center/cover;
 			width: 13px;
 			height: 8px;
 		}
@@ -141,7 +141,7 @@
 		color: #309dcb;
 		display: flex;
 		align-items: center;
-		img{
+		img {
 			margin-left: 5px;
 		}
 		@media (min-width: em(1200)) {

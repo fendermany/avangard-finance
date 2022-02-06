@@ -318,17 +318,7 @@
 		max-width: 1054px;
 		margin: 0 auto;
 		/* .form__row */
-		&__row {
-			display: grid;
-			grid-template: 1fr / repeat(auto-fit, minmax(200px, 1fr));
-			@include adaptiveValue('gap', 32, 16);
-			@media (min-width: $mobileSmall) {
-				grid-template: 1fr / repeat(auto-fit, minmax(330px, 1fr));
-			}
-			& + .form__row {
-				@include adaptiveValue('margin-top', 32, 16);
-			}
-		}
+
 		/* .form__column */
 		&__column {
 		}
@@ -341,7 +331,6 @@
 			width: 100%;
 		}
 		&__error {
-			position: static;
 		}
 		label {
 			font-weight: 600;

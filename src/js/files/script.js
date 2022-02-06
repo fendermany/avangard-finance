@@ -13,6 +13,10 @@ import { bodyUnlock } from './functions.js';
 
 import { menuClose } from './functions.js';
 
+import * as flsForms from './forms/forms.js';
+
+import { formValidate, formSubmit } from './forms/forms.js';
+
 //\\//\\//\\\//\\ Dark Mode //\\//\\//\\\//\\
 
 // Переменные
@@ -29,13 +33,15 @@ function darkMode() {
 	}
 }
 
-switcher.addEventListener('change', darkMode);
+if (switcher) {
+	switcher.addEventListener('change', darkMode);
 
-if (localStorage.getItem('darkMode') == 'dark') {
-	switcher.setAttribute('checked', true);
-	element.classList.add('dark-mode');
-} else {
-	switcher.removeAttribute('checked');
+	if (localStorage.getItem('darkMode') == 'dark') {
+		switcher.setAttribute('checked', true);
+		element.classList.add('dark-mode');
+	} else {
+		switcher.removeAttribute('checked');
+	}
 }
 
 //\\//\\//\\\//\\ Меню услуги //\\//\\//\\\//\\
@@ -88,18 +94,20 @@ if (toggleMenuCloseButton) {
 }
 
 // Закрытие меню "Услуги" при клике вне меню
-document.addEventListener('click', e => {
-	let its_toggleMenu =
-		e.target == toggleMenuBody || toggleMenuBody.contains(e.target);
-	let its_toggleMenuButton =
-		e.target == toggleMenuButton || toggleMenuButton.contains(e.target);
-	let toggleMenu_is_active =
-		document.documentElement.classList.contains('toggle-open');
+if (toggleMenuBody) {
+	document.addEventListener('click', e => {
+		let its_toggleMenu =
+			e.target == toggleMenuBody || toggleMenuBody.contains(e.target);
+		let its_toggleMenuButton =
+			e.target == toggleMenuButton || toggleMenuButton.contains(e.target);
+		let toggleMenu_is_active =
+			document.documentElement.classList.contains('toggle-open');
 
-	if (!its_toggleMenu && !its_toggleMenuButton && toggleMenu_is_active) {
-		toggleMenuClose();
-	}
-});
+		if (!its_toggleMenu && !its_toggleMenuButton && toggleMenu_is_active) {
+			toggleMenuClose();
+		}
+	});
+}
 
 //\\//\\//\\\//\\ Menu Hamburger //\\//\\//\\\//\\
 
@@ -157,7 +165,7 @@ if (filterBody) {
 			filterBody.style.padding = '15px';
 			filterInner.style.paddingBottom = '40px';
 			// Поиск оптимального расположения
-			if (document.documentElement.scrollTop > 100) {
+			if (document.documentElement.scrollTop > 0) {
 				filterBody.style.top = document.documentElement.scrollTop + 'px';
 				filterInner.style.height = `100%`;
 				filterInner.style.maxHeight = '100vh';
@@ -204,7 +212,8 @@ document.addEventListener('click', function (e) {
 		!e.target.closest('.icon-menu') &&
 		!e.target.closest('.topmenu') &&
 		!e.target.closest('.toggleButton') &&
-		!e.target.closest('.toggleMenu')
+		!e.target.closest('.toggleMenu') &&
+		!e.target.closest('.popup__content')
 	) {
 		bodyUnlock();
 	}
@@ -281,6 +290,88 @@ document.addEventListener('click', e => {
 	}
 });
 
-
-
 //\\//\\//\\\//\\ Редактирование //\\//\\//\\\//\\
+
+//\\//\\//\\\//\\ Попап регистрации //\\//\\//\\\//\\
+
+const popupRegistrationButtonNext = document.querySelector(
+		'[data-registration-next]'
+	),
+	popupRegistrationScreenFirst = document.querySelector(
+		'.registration__mobile-1'
+	),
+	popupRegistrationScreenSecond = document.querySelector(
+		'.registration__mobile-2'
+	),
+	popupRegistrationPaginationSpans = document.querySelectorAll(
+		'.registration__mobile-pagination span'
+	);
+
+popupRegistrationButtonNext.addEventListener('click', e => {
+	if (e.target) {
+		popupRegistrationScreenFirst.style.display = 'none';
+		popupRegistrationScreenSecond.style.display = 'block';
+		popupRegistrationPaginationSpans[0].classList.remove('_active');
+		popupRegistrationPaginationSpans[1].classList.add('_active');
+	}
+});
+
+popupRegistrationPaginationSpans[1].addEventListener('click', e => {
+	if (e.target) {
+		popupRegistrationScreenFirst.style.display = 'none';
+		popupRegistrationScreenSecond.style.display = 'block';
+		popupRegistrationPaginationSpans[0].classList.remove('_active');
+		popupRegistrationPaginationSpans[1].classList.add('_active');
+	}
+});
+
+popupRegistrationPaginationSpans[0].addEventListener('click', e => {
+	if (e.target) {
+		popupRegistrationScreenFirst.style.display = 'block';
+		popupRegistrationScreenSecond.style.display = 'none';
+		popupRegistrationPaginationSpans[1].classList.remove('_active');
+		popupRegistrationPaginationSpans[0].classList.add('_active');
+	}
+});
+
+//\\//\\//\\\//\\ Перетаскивание вместо скролла //\\//\\//\\\//\\
+
+const dragScroll = timeline => {
+	// timeline - блок с горизонтальным скроллом
+	timeline.onmousedown = () => {
+		let pageX = 0;
+
+		timeline.onmousemove = e => {
+			if (pageX !== 0) {
+				timeline.scrollLeft = timeline.scrollLeft + (pageX - e.pageX);
+			}
+			pageX = e.pageX;
+		};
+
+		// заканчиваем выполнение событий
+		document.onmouseup = () => {
+			timeline.onmousemove = null;
+			timeline.onmouseup = null;
+		};
+
+		timeline.mouseout = () => {
+			timeline.onmousemove = null;
+			document.onmouseup = null;
+		};
+
+		// отменяем браузерный drag
+		timeline.ondragstart = () => {
+			return false;
+		};
+	};
+};
+
+const topbarList = document.querySelector('.topbar__list'),
+	menubarList = document.querySelector('.menubar__menu-list');
+
+if (topbarList) {
+	dragScroll(topbarList);
+}
+if (menubarList) {
+	dragScroll(menubarList);
+}

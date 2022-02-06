@@ -2,7 +2,7 @@
 <html lang="ru">
 
 <head>
-	<title>Блог</title>
+	<title>Вход</title>
 	<meta charset="UTF-8">
 	<meta name="format-detection" content="telephone=no">
 	<!-- <style>body{opacity: 0;}</style> -->
@@ -13,7 +13,7 @@
 </head>
 
 <body>
-	<div class="wrapper home">
+	<div class="wrapper enter">
 		<header class="header">
 			<div class="header__body">
 				<div class="header__top">
@@ -358,345 +358,124 @@
 			</div>
 		</section>
 
-		<main class="page blog">
+
+		<main class="page">
 			<div class="page__container">
-				<div class="page__breadcrumbs breadcrumbs">
-					<ol itemscope itemtype="https://schema.org/BreadcrumbList">
-						<li itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
-							<a itemprop="item" href="javascript:">
-								<span itemprop="name">Главная</span></a>
-							<meta itemprop="position" content="1" />
-						</li>
-						<li itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
-							<a itemprop="item" href="javascript:">
-								<span itemprop="name">Личный кабинет</span></a>
-							<meta itemprop="position" content="2" />
-						</li>
-					</ol>
+				<div class="enter__mobile enter-mobile">
+					<div class="enter-mobile__slider swiper">
+						<div class="enter-mobile__wrapper swiper-wrapper">
+							<div class="enter-mobile__slide swiper-slide">
+								<div class="enter-mobile__slide-img">
+									<img src="img/enter/safe-mobile.svg" alt="safe-mobile" />
+								</div>
+								<div class="enter-mobile__slide-title">Безопасность</div>
+								<div class="enter-mobile__slide-descr">
+									Открывайте счет для бизнеса в один клик
+								</div>
+								<button type="button" class="enter-mobile-button-next _icon-arrow-right">
+									Далее
+								</button>
+							</div>
+							<div class="enter-mobile__slide swiper-slide">
+								<div class="enter-mobile__slide-img">
+									<img src="img/enter/func-mobile.svg" alt="func-mobile" />
+								</div>
+								<div class="enter-mobile__slide-title">Функциональность</div>
+								<div class="enter-mobile__slide-descr">
+									Открывайте счет для бизнеса в один клик
+								</div>
+								<button type="button" class="enter-mobile-button-next _icon-arrow-right">
+									Далее
+								</button>
+							</div>
+							<div class="enter-mobile__slide swiper-slide">
+								<div class="enter-mobile__slide-img">
+									<img src="img/enter/trans-mobile.svg" alt="trans-mobile" />
+								</div>
+								<div class="enter-mobile__slide-title">Прозрачность</div>
+								<div class="enter-mobile__slide-descr">
+									Открывайте счет для бизнеса в один клик
+								</div>
+								<button type="button" class="enter-mobile-button-next _icon-arrow-right">
+									Далее
+								</button>
+							</div>
+							<div class="enter-mobile__slide swiper-slide">
+								<div class="enter-mobile__slide-img">
+									<img src="img/enter/enter-mobile.svg" alt="enter-mobile" />
+								</div>
+								<div class="enter-mobile__slide-title">Войдите в аккаунт</div>
+								<div class="enter-mobile__slide-descr">
+									Открывайте счет для бизнеса в один клик
+								</div>
+								<div class="enter-mobile__slide-btns">
+									<button data-popup="#popup__authorization" class="enter-mobile__slide-btn">
+										Войти
+									</button>
+									<button data-popup="#popup__registration" class="enter-mobile__slide-btn">
+										Регистрация
+									</button>
+								</div>
+							</div>
+						</div>
+						<div class="enter-mobile__pagination"></div>
+					</div>
 				</div>
-				<h1 class="page__title">Блог</h1>
-				<div class="blog__list">
-					<a href="javascript:" class="blog__list-item"> Криптовалюта </a>
-					<a href="javascript:" class="blog__list-item"> Страховые взносы </a>
-					<a href="javascript:" class="blog__list-item"> Малый бизнес </a>
-					<a href="javascript:" class="blog__list-item"> Экспорт </a>
-					<a href="javascript:" class="blog__list-item"> Лизинг техники </a>
-					<a href="javascript:" class="blog__list-item"> Bitcoin </a>
-					<a href="javascript:" class="blog__list-item"> Страховые взносы </a>
-					<a href="javascript:" class="blog__list-item"> Крупный бизнес </a>
-					<a href="javascript:" class="blog__list-item"> МРОТ </a>
-					<a href="javascript:" class="blog__list-item"> ИП </a>
-				</div>
-				<ul class="blog__body grid-1">
-					<li class="blog__item" style="background: url('img/blog1.png') no-repeat center / cover">
-						<div class="blog__item-wrapper">
-							<a href="javascript:" class="blog__item-category olive">Полезное</a>
-							<a href="javascript:" class="blog__item-title">Мировая экономика в этом году начнет резко сокращаться</a>
-							<div class="blog__item-descr">
-								Прежние прогнозы перевернуты «с ног на голову»: вместо
-								предполагавшегося роста экономики в 160 странах теперь
-								ожидается ее сокращение!
-							</div>
-							<a href="javascript:" type="button" class="blog__item-btn">Читать</a>
+				<div class="enter__desktop enter-desktop">
+					<a class="enter-desktop__logo logo" href="/home.html">
+						<div class="logo__img">
+							<img class="_lazy" data-src="img/logo.svg" alt="logo" />
 						</div>
-					</li>
-					<li class="blog__item" style="background: url('img/blog2.png') no-repeat center / cover">
-						<div class="blog__item-wrapper">
-							<a href="javascript:" class="blog__item-category yellow">Полезное</a>
-							<a href="javascript:" class="blog__item-title">Мировая экономика в этом году начнет резко сокращаться</a>
-							<div class="blog__item-descr">
-								Прежние прогнозы перевернуты «с ног на голову»: вместо
-								предполагавшегося роста экономики в 160 странах теперь
-								ожидается ее сокращение!
+						<span class="logo__text">АВАНГАРД-ФИНАНС</span>
+					</a>
+					<div class="enter-desktop__slider swiper">
+						<div class="enter-desktop__wrapper swiper-wrapper">
+							<div class="enter-desktop__slide swiper-slide">
+								<div class="enter-desktop__slide-img">
+									<img src="img/enter/safe-pc.svg" alt="safe-pc" />
+								</div>
+								<div class="enter-desktop__slide-title">Безопасность</div>
+								<div class="enter-desktop__slide-descr">
+									АВАНГАРД-ФИНАНС защищён уникальной комбинацией из 34
+									символов, дополнительно доступна защита паролем и
+									двухфакторная аутентификация
+								</div>
 							</div>
-							<a href="javascript:" type="button" class="blog__item-btn">Читать</a>
-						</div>
-					</li>
-					<li class="blog__item" style="background: url('img/blog3.png') no-repeat center / cover">
-						<div class="blog__item-wrapper">
-							<a href="javascript:" class="blog__item-category red">Полезное</a>
-							<a href="javascript:" class="blog__item-title">Мировая экономика в этом году начнет резко сокращаться</a>
-							<div class="blog__item-descr">
-								Прежние прогнозы перевернуты «с ног на голову»: вместо
-								предполагавшегося роста экономики в 160 странах теперь
-								ожидается ее сокращение!
+							<div class="enter-desktop__slide swiper-slide">
+								<div class="enter-desktop__slide-img">
+									<img src="img/enter/func-pc.svg" alt="func-pc" />
+								</div>
+								<div class="enter-desktop__slide-title">Функциональность</div>
+								<div class="enter-desktop__slide-descr">
+									АВАНГАРД-ФИНАНС позволяет открыть счет для бизнеса в один
+									клик, по своему функционалу сервис не имеет аналогов в
+									России и мире
+								</div>
 							</div>
-							<a href="javascript:" type="button" class="blog__item-btn">Читать</a>
-						</div>
-					</li>
-				</ul>
-				<ul class="blog__body grid-2">
-					<li class="blog__item" style="background: url('img/blog4.png') no-repeat center / cover">
-						<div class="blog__item-wrapper">
-							<a href="javascript:" class="blog__item-category olive">Полезное</a>
-							<a href="javascript:" class="blog__item-title">Мировая экономика в этом году начнет резко сокращаться</a>
-							<div class="blog__item-descr">
-								Прежние прогнозы перевернуты «с ног на голову»: вместо
-								предполагавшегося роста экономики в 160 странах теперь
-								ожидается ее сокращение!
+							<div class="enter-desktop__slide swiper-slide">
+								<div class="enter-desktop__slide-img">
+									<img src="img/enter/trans-pc.svg" alt="trans-pc" />
+								</div>
+								<div class="enter-desktop__slide-title">Прозрачность</div>
+								<div class="enter-desktop__slide-descr">
+									Мы стремимся сделать удобный и доступный сервис, не взимая
+									никаких скрытых сборов и комиссий
+								</div>
 							</div>
-							<a href="javascript:" type="button" class="blog__item-btn">Читать</a>
 						</div>
-					</li>
-					<li class="blog__item" style="background: url('img/blog5.png') no-repeat center / cover">
-						<div class="blog__item-wrapper">
-							<a href="javascript:" class="blog__item-category yellow">Полезное</a>
-							<a href="javascript:" class="blog__item-title">Мировая экономика в этом году начнет резко сокращаться</a>
-							<div class="blog__item-descr">
-								Прежние прогнозы перевернуты «с ног на голову»: вместо
-								предполагавшегося роста экономики в 160 странах теперь
-								ожидается ее сокращение!
-							</div>
-							<a href="javascript:" type="button" class="blog__item-btn">Читать</a>
-						</div>
-					</li>
-					<li class="blog__item" style="background: url('img/blog6.png') no-repeat center / cover">
-						<div class="blog__item-wrapper">
-							<a href="javascript:" class="blog__item-category olive">Полезное</a>
-							<a href="javascript:" class="blog__item-title">Мировая экономика в этом году начнет резко сокращаться</a>
-							<div class="blog__item-descr">
-								Прежние прогнозы перевернуты «с ног на голову»: вместо
-								предполагавшегося роста экономики в 160 странах теперь
-								ожидается ее сокращение!
-							</div>
-							<a href="javascript:" type="button" class="blog__item-btn">Читать</a>
-						</div>
-					</li>
-					<li class="blog__item" style="background: url('img/blog7.png') no-repeat center / cover">
-						<div class="blog__item-wrapper">
-							<a href="javascript:" class="blog__item-category red">Полезное</a>
-							<a href="javascript:" class="blog__item-title">Мировая экономика в этом году начнет резко сокращаться</a>
-							<div class="blog__item-descr">
-								Прежние прогнозы перевернуты «с ног на голову»: вместо
-								предполагавшегося роста экономики в 160 странах теперь
-								ожидается ее сокращение!
-							</div>
-							<a href="javascript:" type="button" class="blog__item-btn">Читать</a>
-						</div>
-					</li>
-					<li class="blog__item" style="background: url('img/blog1.png') no-repeat center / cover">
-						<div class="blog__item-wrapper">
-							<a href="javascript:" class="blog__item-category olive">Полезное</a>
-							<a href="javascript:" class="blog__item-title">Мировая экономика в этом году начнет резко сокращаться</a>
-							<div class="blog__item-descr">
-								Прежние прогнозы перевернуты «с ног на голову»: вместо
-								предполагавшегося роста экономики в 160 странах теперь
-								ожидается ее сокращение!
-							</div>
-							<a href="javascript:" type="button" class="blog__item-btn">Читать</a>
-						</div>
-					</li>
-					<li class="blog__item" style="background: url('img/blog2.png') no-repeat center / cover">
-						<div class="blog__item-wrapper">
-							<a href="javascript:" class="blog__item-category yellow">Полезное</a>
-							<a href="javascript:" class="blog__item-title">Мировая экономика в этом году начнет резко сокращаться</a>
-							<div class="blog__item-descr">
-								Прежние прогнозы перевернуты «с ног на голову»: вместо
-								предполагавшегося роста экономики в 160 странах теперь
-								ожидается ее сокращение!
-							</div>
-							<a href="javascript:" type="button" class="blog__item-btn">Читать</a>
-						</div>
-					</li>
-					<li class="blog__item" style="background: url('img/blog3.png') no-repeat center / cover">
-						<div class="blog__item-wrapper">
-							<a href="javascript:" class="blog__item-category red">Полезное</a>
-							<a href="javascript:" class="blog__item-title">Мировая экономика в этом году начнет резко сокращаться</a>
-							<div class="blog__item-descr">
-								Прежние прогнозы перевернуты «с ног на голову»: вместо
-								предполагавшегося роста экономики в 160 странах теперь
-								ожидается ее сокращение!
-							</div>
-							<a href="javascript:" type="button" class="blog__item-btn">Читать</a>
-						</div>
-					</li>
-					<li class="blog__item" style="background: url('img/blog4.png') no-repeat center / cover">
-						<div class="blog__item-wrapper">
-							<a href="javascript:" class="blog__item-category olive">Полезное</a>
-							<a href="javascript:" class="blog__item-title">Мировая экономика в этом году начнет резко сокращаться</a>
-							<div class="blog__item-descr">
-								Прежние прогнозы перевернуты «с ног на голову»: вместо
-								предполагавшегося роста экономики в 160 странах теперь
-								ожидается ее сокращение!
-							</div>
-							<a href="javascript:" type="button" class="blog__item-btn">Читать</a>
-						</div>
-					</li>
-					<li class="blog__item" style="background: url('img/blog5.png') no-repeat center / cover">
-						<div class="blog__item-wrapper">
-							<a href="javascript:" class="blog__item-category olive">Полезное</a>
-							<a href="javascript:" class="blog__item-title">Мировая экономика в этом году начнет резко сокращаться</a>
-							<div class="blog__item-descr">
-								Прежние прогнозы перевернуты «с ног на голову»: вместо
-								предполагавшегося роста экономики в 160 странах теперь
-								ожидается ее сокращение!
-							</div>
-							<a href="javascript:" type="button" class="blog__item-btn">Читать</a>
-						</div>
-					</li>
-					<li class="blog__item" style="background: url('img/blog6.png') no-repeat center / cover">
-						<div class="blog__item-wrapper">
-							<a href="javascript:" class="blog__item-category olive">Полезное</a>
-							<a href="javascript:" class="blog__item-title">Мировая экономика в этом году начнет резко сокращаться</a>
-							<div class="blog__item-descr">
-								Прежние прогнозы перевернуты «с ног на голову»: вместо
-								предполагавшегося роста экономики в 160 странах теперь
-								ожидается ее сокращение!
-							</div>
-							<a href="javascript:" type="button" class="blog__item-btn">Читать</a>
-						</div>
-					</li>
-					<li class="blog__item" style="background: url('img/blog7.png') no-repeat center / cover">
-						<div class="blog__item-wrapper">
-							<a href="javascript:" class="blog__item-category olive">Полезное</a>
-							<a href="javascript:" class="blog__item-title">Мировая экономика в этом году начнет резко сокращаться</a>
-							<div class="blog__item-descr">
-								Прежние прогнозы перевернуты «с ног на голову»: вместо
-								предполагавшегося роста экономики в 160 странах теперь
-								ожидается ее сокращение!
-							</div>
-							<a href="javascript:" type="button" class="blog__item-btn">Читать</a>
-						</div>
-					</li>
-					<li class="blog__item" style="background: url('img/blog1.png') no-repeat center / cover">
-						<div class="blog__item-wrapper">
-							<a href="javascript:" class="blog__item-category olive">Полезное</a>
-							<a href="javascript:" class="blog__item-title">Мировая экономика в этом году начнет резко сокращаться</a>
-							<div class="blog__item-descr">
-								Прежние прогнозы перевернуты «с ног на голову»: вместо
-								предполагавшегося роста экономики в 160 странах теперь
-								ожидается ее сокращение!
-							</div>
-							<a href="javascript:" type="button" class="blog__item-btn">Читать</a>
-						</div>
-					</li>
-					<li class="blog__item" style="background: url('img/blog2.png') no-repeat center / cover">
-						<div class="blog__item-wrapper">
-							<a href="javascript:" class="blog__item-category olive">Полезное</a>
-							<a href="javascript:" class="blog__item-title">Мировая экономика в этом году начнет резко сокращаться</a>
-							<div class="blog__item-descr">
-								Прежние прогнозы перевернуты «с ног на голову»: вместо
-								предполагавшегося роста экономики в 160 странах теперь
-								ожидается ее сокращение!
-							</div>
-							<a href="javascript:" type="button" class="blog__item-btn">Читать</a>
-						</div>
-					</li>
-					<li class="blog__item" style="background: url('img/blog3.png') no-repeat center / cover">
-						<div class="blog__item-wrapper">
-							<a href="javascript:" class="blog__item-category olive">Полезное</a>
-							<a href="javascript:" class="blog__item-title">Мировая экономика в этом году начнет резко сокращаться</a>
-							<div class="blog__item-descr">
-								Прежние прогнозы перевернуты «с ног на голову»: вместо
-								предполагавшегося роста экономики в 160 странах теперь
-								ожидается ее сокращение!
-							</div>
-							<a href="javascript:" type="button" class="blog__item-btn">Читать</a>
-						</div>
-					</li>
-					<li class="blog__item" style="background: url('img/blog4.png') no-repeat center / cover">
-						<div class="blog__item-wrapper">
-							<a href="javascript:" class="blog__item-category olive">Полезное</a>
-							<a href="javascript:" class="blog__item-title">Мировая экономика в этом году начнет резко сокращаться</a>
-							<div class="blog__item-descr">
-								Прежние прогнозы перевернуты «с ног на голову»: вместо
-								предполагавшегося роста экономики в 160 странах теперь
-								ожидается ее сокращение!
-							</div>
-							<a href="javascript:" type="button" class="blog__item-btn">Читать</a>
-						</div>
-					</li>
-				</ul>
-				<div class="pagging">
-					<a href="javascript:" class="pagging__arrow">Назад</a>
-					<ul class="pagging__list">
-						<li class="_active">
-							<a href="javascript:" class="pagging__item">1</a>
-						</li>
-						<li>
-							<a href="javascript:" class="pagging__item">2</a>
-						</li>
-						<li>
-							<a href="javascript:" class="pagging__item">3</a>
-						</li>
-						<li>
-							<a href="javascript:" class="pagging__item">4</a>
-						</li>
-					</ul>
-					<a href="javascript:" class="pagging__arrow">Вперед</a>
+						<div class="enter-desktop__pagination"></div>
+					</div>
+					<div class="enter-desktop__btns">
+						<button data-popup="#popup__authorization" type="button" class="enter-desktop__btn">
+							Войти
+						</button>
+						<button data-popup="#popup__registration" type="button" class="enter-desktop__btn">
+							Регистрация
+						</button>
+					</div>
 				</div>
 			</div>
 		</main>
-		<footer class="footer">
-			<div class="footer__container">
-				<div class="footer__wrapper">
-					<div class="footer__body">
-						<div class="footer__logo logo">
-							<div class="logo__img">
-								<img class="_lazy" data-src="img/logo.svg" alt="logo" />
-							</div>
-							<span class="logo__text">АВАНГАРД-ФИНАНС</span>
-						</div>
-						<div class="footer__descr">
-							Чтобы вам было проще вести бизнес, мы взяли на себя поиск кредитов,
-							гарантий и других финансовых услуг и собрали предложения ведущих
-							банков и организаций развития на одной платформе. Не нужно посещать
-							десятки сайтов. На нашей платформе уже есть продукты разных финансовых
-							организаций. Здесь можно сравнить их и подать заявку.
-						</div>
-						<div class="footer__copyright">©2021 ООО «АВАНГАРД-ФИНАНС»</div>
-						<ul class="footer__links">
-							<li class="footer__links-item">
-								<a href="#" class="footer__links-link">
-									Политика конфиденциальности
-								</a>
-							</li>
-							<li class="footer__links-item">
-								<a href="#" class="footer__links-link">
-									Пользовательское соглашение
-								</a>
-							</li>
-							<li class="footer__links-item">
-								<a href="#" class="footer__links-link"> Карта сайта </a>
-							</li>
-						</ul>
-					</div>
-					<div class="footer__cta">
-						<div class="footer__cta-top">Хотите получить финансирование?</div>
-						<div class="footer__cta-middle">Нажмите на кнопку!</div>
-						<button class="btn">Получить</button>
-					</div>
-					<div data-da=".footer__body,767.98,1" class="footer__menu f-menu">
-						<ul class="f-menu__list">
-							<li class="f-menu__item">
-								<a href="#" class="f-menu__link">Кредиты</a>
-							</li>
-							<li class="f-menu__item">
-								<a href="#" class="f-menu__link">Лизинг</a>
-							</li>
-							<li class="f-menu__item">
-								<a href="#" class="f-menu__link">РКО</a>
-							</li>
-							<li class="f-menu__item">
-								<a href="#" class="f-menu__link">Факторинг</a>
-							</li>
-							<li class="f-menu__item">
-								<a href="#" class="f-menu__link">Гарантии под контракты</a>
-							</li>
-							<li class="f-menu__item">
-								<a href="#" class="f-menu__link">Экспортное страхование</a>
-							</li>
-						</ul>
-						<div data-da=".footer__body,767.98,last" class="footer__phone">
-							Горячая линия АВАНГАРД-ФИНАНС
-							<a href="tel:8800000000000">8 800 000 000 000</a>
-						</div>
-					</div>
-				</div>
-			</div>
-			<img class="footer__img" src="img/finance.svg" alt="finance" />
-		</footer>
-
 	</div>
 	<div id="popup__changePassword" aria-hidden="true" class="popup changePassword">
 		<div class="popup__wrapper">

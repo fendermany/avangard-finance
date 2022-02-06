@@ -1,10 +1,16 @@
 // Подключение функционала "Чертогов Фрилансера"
 // Подключение списка активных модулей
-import { flsModules } from "../modules.js";
+import { flsModules } from '../modules.js';
 // Вспомогательные функции
-import { isMobile, _slideUp, _slideDown, _slideToggle, FLS } from "../functions.js";
+import {
+	isMobile,
+	_slideUp,
+	_slideDown,
+	_slideToggle,
+	FLS,
+} from '../functions.js';
 // Модуль прокрутки к блоку
-import { gotoBlock } from "../scroll/gotoblock.js";
+import { gotoBlock } from '../scroll/gotoblock.js';
 //================================================================================================================================================================================================================================================================================================================================
 
 /*
@@ -25,15 +31,20 @@ data-goto-error - прокрутить страницу к ошибке
 
 // Работа с полями формы. Добавление классов, работа с placeholder
 export function formFieldsInit() {
-	const formFields = document.querySelectorAll('input[placeholder],textarea[placeholder]');
+	const formFields = document.querySelectorAll(
+		'input[placeholder],textarea[placeholder]'
+	);
 	if (formFields.length) {
 		formFields.forEach(formField => {
 			formField.dataset.placeholder = formField.placeholder;
 		});
 	}
-	document.body.addEventListener("focusin", function (e) {
+	document.body.addEventListener('focusin', function (e) {
 		const targetElement = e.target;
-		if ((targetElement.tagName === 'INPUT' || targetElement.tagName === 'TEXTAREA')) {
+		if (
+			targetElement.tagName === 'INPUT' ||
+			targetElement.tagName === 'TEXTAREA'
+		) {
 			if (targetElement.dataset.placeholder) {
 				targetElement.placeholder = '';
 			}
@@ -43,9 +54,12 @@ export function formFieldsInit() {
 			formValidate.removeError(targetElement);
 		}
 	});
-	document.body.addEventListener("focusout", function (e) {
+	document.body.addEventListener('focusout', function (e) {
 		const targetElement = e.target;
-		if ((targetElement.tagName === 'INPUT' || targetElement.tagName === 'TEXTAREA')) {
+		if (
+			targetElement.tagName === 'INPUT' ||
+			targetElement.tagName === 'TEXTAREA'
+		) {
 			if (targetElement.dataset.placeholder) {
 				targetElement.placeholder = targetElement.dataset.placeholder;
 			}
@@ -66,7 +80,11 @@ export let formValidate = {
 		let formRequiredItems = form.querySelectorAll('*[data-required]');
 		if (formRequiredItems.length) {
 			formRequiredItems.forEach(formRequiredItem => {
-				if ((formRequiredItem.offsetParent !== null || formRequiredItem.tagName === "SELECT") && !formRequiredItem.disabled) {
+				if (
+					(formRequiredItem.offsetParent !== null ||
+						formRequiredItem.tagName === 'SELECT') &&
+					!formRequiredItem.disabled
+				) {
 					error += this.validateInput(formRequiredItem);
 				}
 			});
@@ -75,15 +93,18 @@ export let formValidate = {
 	},
 	validateInput(formRequiredItem) {
 		let error = 0;
-		if (formRequiredItem.dataset.required === "email") {
-			formRequiredItem.value = formRequiredItem.value.replace(" ", "");
+		if (formRequiredItem.dataset.required === 'email') {
+			formRequiredItem.value = formRequiredItem.value.replace(' ', '');
 			if (this.emailTest(formRequiredItem)) {
 				this.addError(formRequiredItem);
 				error++;
 			} else {
 				this.removeError(formRequiredItem);
 			}
-		} else if (formRequiredItem.type === "checkbox" && !formRequiredItem.checked) {
+		} else if (
+			formRequiredItem.type === 'checkbox' &&
+			!formRequiredItem.checked
+		) {
 			this.addError(formRequiredItem);
 			error++;
 		} else {
@@ -99,17 +120,23 @@ export let formValidate = {
 	addError(formRequiredItem) {
 		formRequiredItem.classList.add('_form-error');
 		formRequiredItem.parentElement.classList.add('_form-error');
-		let inputError = formRequiredItem.parentElement.querySelector('.form__error');
+		let inputError =
+			formRequiredItem.parentElement.querySelector('.form__error');
 		if (inputError) formRequiredItem.parentElement.removeChild(inputError);
 		if (formRequiredItem.dataset.error) {
-			formRequiredItem.parentElement.insertAdjacentHTML('beforeend', `<div class="form__error">${formRequiredItem.dataset.error}</div>`);
+			formRequiredItem.parentElement.insertAdjacentHTML(
+				'beforeend',
+				`<div class="form__error">${formRequiredItem.dataset.error}</div>`
+			);
 		}
 	},
 	removeError(formRequiredItem) {
 		formRequiredItem.classList.remove('_form-error');
 		formRequiredItem.parentElement.classList.remove('_form-error');
 		if (formRequiredItem.parentElement.querySelector('.form__error')) {
-			formRequiredItem.parentElement.removeChild(formRequiredItem.parentElement.querySelector('.form__error'));
+			formRequiredItem.parentElement.removeChild(
+				formRequiredItem.parentElement.querySelector('.form__error')
+			);
 		}
 	},
 	formClean(form) {
@@ -141,11 +168,42 @@ export let formValidate = {
 		}, 0);
 	},
 	emailTest(formRequiredItem) {
-		return !/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,8})+$/.test(formRequiredItem.value);
-	}
-}
+		return !/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,8})+$/.test(
+			formRequiredItem.value
+		);
+	},
+};
 /* Отправка форм */
+
 export function formSubmit(validate) {
+	let modalState = {};
+	const changeModalState = state => {
+		const registrationInputs = document.querySelectorAll(
+			'.registration__mobile input'
+		);
+
+		function bindActionToElems(elem) {
+			elem.forEach(item => {
+				item.addEventListener('input', () => {
+					switch (item.name) {
+						case 'name':
+							state['name'] = item.value;
+							break;
+						case 'lastname':
+							state['lastname'] = item.value;
+							break;
+						case 'surname':
+							state['surname'] = item.value;
+							break;
+					}
+				});
+			});
+		}
+
+		bindActionToElems(registrationInputs);
+	};
+	changeModalState(modalState);
+
 	if (flsModules.popup) {
 		flsModules.popup.open('some');
 	}
@@ -154,7 +212,8 @@ export function formSubmit(validate) {
 		for (const form of forms) {
 			form.addEventListener('submit', function (e) {
 				const form = e.target;
-				formSubmitAction(form, e);
+				formSubmitAction(modalState, form, e);
+				console.log(modalState);
 			});
 			form.addEventListener('reset', function (e) {
 				const form = e.target;
@@ -162,30 +221,42 @@ export function formSubmit(validate) {
 			});
 		}
 	}
-	async function formSubmitAction(form, e) {
+	async function formSubmitAction(state, form, e) {
 		const error = validate ? formValidate.getErrors(form) : 0;
 		if (error === 0) {
 			const ajax = form.hasAttribute('data-ajax');
-			if (ajax) { // Если режим ajax
+			if (ajax) {
+				// Если режим ajax
 				e.preventDefault();
-				const formAction = form.getAttribute('action') ? form.getAttribute('action').trim() : '#';
-				const formMethod = form.getAttribute('method') ? form.getAttribute('method').trim() : 'GET';
+				const formAction = form.getAttribute('action')
+					? form.getAttribute('action').trim()
+					: '#';
+				const formMethod = form.getAttribute('method')
+					? form.getAttribute('method').trim()
+					: 'GET';
 				const formData = new FormData(form);
+
+				if (form.getAttribute('data-registration-last')) {
+					for (let key in state) {
+						formData.append(key, state[key]);
+					}
+				}
 
 				form.classList.add('_sending');
 				const response = await fetch(formAction, {
 					method: formMethod,
-					body: formData
+					body: formData,
 				});
 				if (response.ok) {
 					let responseResult = await response.json();
 					form.classList.remove('_sending');
 					formSent(form);
 				} else {
-					alert("Ошибка");
+					alert('Ошибка');
 					form.classList.remove('_sending');
 				}
-			} else if (form.hasAttribute('data-dev')) {	// Если режим разработки
+			} else if (form.hasAttribute('data-dev')) {
+				// Если режим разработки
 				e.preventDefault();
 				formSent(form);
 			}
@@ -200,12 +271,14 @@ export function formSubmit(validate) {
 	// Действия после отправки формы
 	function formSent(form) {
 		// Создаем событие отправки формы
-		document.dispatchEvent(new CustomEvent("formSent", {
-			detail: {
-				form: form
-			}
-		}));
-		// Показываем попап, если подключен модуль попапов 
+		document.dispatchEvent(
+			new CustomEvent('formSent', {
+				detail: {
+					form: form,
+				},
+			})
+		);
+		// Показываем попап, если подключен модуль попапов
 		// и для формы указана настройка
 		setTimeout(() => {
 			if (flsModules.popup) {
@@ -224,21 +297,27 @@ export function formSubmit(validate) {
 }
 /* Модуь формы "показать пароль" */
 export function formViewpass() {
-	document.addEventListener("click", function (e) {
+	document.addEventListener('click', function (e) {
 		let targetElement = e.target;
 		if (targetElement.closest('[class*="__viewpass"]')) {
-			let inputType = targetElement.classList.contains('active') ? "password" : "text";
-			targetElement.parentElement.querySelector('input').setAttribute("type", inputType);
+			let inputType = targetElement.classList.contains('active')
+				? 'password'
+				: 'text';
+			targetElement.parentElement
+				.querySelector('input')
+				.setAttribute('type', inputType);
 			targetElement.classList.toggle('active');
 		}
 	});
 }
 /* Модуь формы "колличество" */
 export function formQuantity() {
-	document.addEventListener("click", function (e) {
+	document.addEventListener('click', function (e) {
 		let targetElement = e.target;
 		if (targetElement.closest('.quantity__button')) {
-			let value = parseInt(targetElement.closest('.quantity').querySelector('input').value);
+			let value = parseInt(
+				targetElement.closest('.quantity').querySelector('input').value
+			);
 			if (targetElement.classList.contains('quantity__button_plus')) {
 				value++;
 			} else {
@@ -283,22 +362,22 @@ export function formRating() {
 			const ratingActiveWidth = index / 0.05;
 			ratingActive.style.width = `${ratingActiveWidth}%`;
 		}
-		// Возможность указать оценку 
+		// Возможность указать оценку
 		function setRating(rating) {
 			const ratingItems = rating.querySelectorAll('.rating__item');
 			for (let index = 0; index < ratingItems.length; index++) {
 				const ratingItem = ratingItems[index];
-				ratingItem.addEventListener("mouseenter", function (e) {
+				ratingItem.addEventListener('mouseenter', function (e) {
 					// Обновление переменных
 					initRatingVars(rating);
 					// Обновление активных звезд
 					setRatingActiveWidth(ratingItem.value);
 				});
-				ratingItem.addEventListener("mouseleave", function (e) {
+				ratingItem.addEventListener('mouseleave', function (e) {
 					// Обновление активных звезд
 					setRatingActiveWidth();
 				});
-				ratingItem.addEventListener("click", function (e) {
+				ratingItem.addEventListener('click', function (e) {
 					// Обновление переменных
 					initRatingVars(rating);
 
@@ -327,7 +406,6 @@ export function formRating() {
 					//headers: {
 					//	'content-type': 'application/json'
 					//}
-
 				});
 				if (response.ok) {
 					const result = await response.json();
@@ -343,7 +421,7 @@ export function formRating() {
 
 					rating.classList.remove('rating_sending');
 				} else {
-					alert("Ошибка");
+					alert('Ошибка');
 
 					rating.classList.remove('rating_sending');
 				}

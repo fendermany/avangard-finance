@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html lang="ru">
-	@@include('html/_head.htm',{ "title":"Банкам" })
+	@@include('html/_head.htm',{ "title":"Банки" })
 	<body>
 		<div class="wrapper">
 			@@include('html/_header.htm',{})
@@ -33,7 +33,11 @@
 					<h2 class="banks-page__mobtitle">Оборотный кредит</h2>
 					<div class="banks-page__promo">
 						<div class="banks-page__promo-img">
-							<img src="@img/banks-thumbnail.svg" alt="banks-thumbnail" />
+							<img
+								class="_lazy"
+								data-src="@img/banks-thumbnail.svg"
+								alt="banks-thumbnail"
+							/>
 						</div>
 						<div class="banks-page__promo-body">
 							<h1 class="banks-page__promo-title">
@@ -51,19 +55,22 @@
 							<button class="btn banks-page__promo-btn">Подать заявку</button>
 						</div>
 					</div>
-					<ul data-da=".banks-page__promo-body,767.98,2" class="banks-page__list">
+					<ul
+						data-da=".banks-page__promo-body,767.98,2"
+						class="banks-page__list"
+					>
 						<li class="banks-page__list-item">
-							<img src="@img/stavka.svg" alt="stavka">
+							<img class="_lazy" data-src="@img/stavka.svg" alt="stavka" />
 							<span>Ставка</span>
 							<span class="red">от 11%</span>
 						</li>
 						<li class="banks-page__list-item">
-							<img src="@img/srok.svg" alt="srok">
+							<img class="_lazy" data-src="@img/srok.svg" alt="srok" />
 							<span>Срок</span>
 							<span class="blue">до 3 лет</span>
 						</li>
 						<li class="banks-page__list-item">
-							<img src="@img/razmer.svg" alt="razmer">
+							<img class="_lazy" data-src="@img/razmer.svg" alt="razmer" />
 							<span>Сумма</span>
 							<span class="green">От 100 тыс до 5 млн ₽</span>
 						</li>
@@ -269,12 +276,15 @@
 					</div>
 					<div class="banks-page__form">
 						<form class="form" data-dev action="#">
-							<h2 class="banks-page__form-title">Подайте заявку прямо сейчас</h2>
+							<h2 class="banks-page__form-title">
+								Подайте заявку прямо сейчас
+							</h2>
 							<div class="form__row">
 								<div class="form__column">
 									<div class="form__line">
 										<label for="summa">Сумма</label>
 										<input
+											data-required
 											autocomplete="off"
 											type="text"
 											name="summa"
@@ -288,6 +298,7 @@
 									<div class="form__line">
 										<label for="deadline">Срок</label>
 										<input
+											data-required
 											autocomplete="off"
 											type="text"
 											name="deadline"
@@ -303,6 +314,7 @@
 									<div class="form__line">
 										<label for="company">Компания или ИП</label>
 										<input
+											data-required
 											autocomplete="off"
 											type="text"
 											name="company"
@@ -318,6 +330,7 @@
 									<div class="form__line">
 										<label for="lastname">Фамилия</label>
 										<input
+											data-required
 											autocomplete="off"
 											type="text"
 											name="lastname"
@@ -331,6 +344,7 @@
 									<div class="form__line">
 										<label for="name">Имя</label>
 										<input
+											data-required
 											autocomplete="off"
 											type="text"
 											name="name"
@@ -344,6 +358,7 @@
 									<div class="form__line">
 										<label for="surname">Отчество</label>
 										<input
+											data-required
 											autocomplete="off"
 											type="text"
 											name="surname"
@@ -359,6 +374,7 @@
 									<div class="form__line">
 										<label for="email">E-mail</label>
 										<input
+											data-required="email"
 											autocomplete="off"
 											type="text"
 											name="email"
@@ -371,29 +387,124 @@
 								<div class="form__column">
 									<div class="form__line">
 										<label for="phone">Мобильный телефон</label>
-										<input
-											autocomplete="off"
-											type="text"
-											name="phone"
-											data-error="Введите телефон"
-											placeholder="+7 (***)-***-****"
-											class="input"
-										/>
+
+										<div class="form__line-inner">
+											<svg
+												width="37"
+												height="24"
+												viewBox="0 0 37 24"
+												fill="none"
+												xmlns="http://www.w3.org/2000/svg"
+											>
+												<rect
+													y="3"
+													width="37"
+													height="18"
+													rx="2"
+													fill="#F9F9F9"
+												/>
+												<path
+													d="M3 7C3 6.44772 3.44772 6 4 6H5C5.55228 6 6 6.44772 6 7V8C6 8.55228 5.55228 9 5 9H4C3.44772 9 3 8.55228 3 8V7Z"
+													fill="#ECEBEB"
+												/>
+												<path
+													d="M11 7C11 6.44772 11.4477 6 12 6H13C13.5523 6 14 6.44772 14 7V8C14 8.55228 13.5523 9 13 9H12C11.4477 9 11 8.55228 11 8V7Z"
+													fill="#ECEBEB"
+												/>
+												<path
+													d="M24 6C23.4477 6 23 6.44772 23 7V8C23 8.55228 23.4477 9 24 9H25C25.5523 9 26 8.55228 26 8V7C26 6.44772 25.5523 6 25 6H24Z"
+													fill="#ECEBEB"
+												/>
+												<path
+													d="M31 7C31 6.44772 31.4477 6 32 6H33C33.5523 6 34 6.44772 34 7V12C34 12.5523 33.5523 13 33 13H30C29.4477 13 29 12.5523 29 12V11C29 10.4477 29.4477 10 30 10H31V7Z"
+													fill="#ECEBEB"
+												/>
+												<path
+													d="M8 6C7.44772 6 7 6.44772 7 7V8C7 8.55228 7.44772 9 8 9H9C9.55228 9 10 8.55228 10 8V7C10 6.44772 9.55229 6 9 6H8Z"
+													fill="#ECEBEB"
+												/>
+												<path
+													d="M19 7C19 6.44772 19.4477 6 20 6H21C21.5523 6 22 6.44772 22 7V8C22 8.55228 21.5523 9 21 9H20C19.4477 9 19 8.55228 19 8V7Z"
+													fill="#ECEBEB"
+												/>
+												<path
+													d="M16 6C15.4477 6 15 6.44772 15 7V8C15 8.55228 15.4477 9 16 9H17C17.5523 9 18 8.55228 18 8V7C18 6.44772 17.5523 6 17 6H16Z"
+													fill="#ECEBEB"
+												/>
+												<path
+													d="M27 7C27 6.44772 27.4477 6 28 6H29C29.5523 6 30 6.44772 30 7V8C30 8.55228 29.5523 9 29 9H28C27.4477 9 27 8.55228 27 8V7Z"
+													fill="#ECEBEB"
+												/>
+												<path
+													d="M6 10C5.44772 10 5 10.4477 5 11V12C5 12.5523 5.44772 13 6 13H7C7.55228 13 8 12.5523 8 12V11C8 10.4477 7.55228 10 7 10H6Z"
+													fill="#ECEBEB"
+												/>
+												<path
+													d="M13 11C13 10.4477 13.4477 10 14 10H15C15.5523 10 16 10.4477 16 11V12C16 12.5523 15.5523 13 15 13H14C13.4477 13 13 12.5523 13 12V11Z"
+													fill="#ECEBEB"
+												/>
+												<path
+													d="M26 10C25.4477 10 25 10.4477 25 11V12C25 12.5523 25.4477 13 26 13H27C27.5523 13 28 12.5523 28 12V11C28 10.4477 27.5523 10 27 10H26Z"
+													fill="#ECEBEB"
+												/>
+												<path
+													d="M10 10C9.44772 10 9 10.4477 9 11V12C9 12.5523 9.44771 13 10 13H11C11.5523 13 12 12.5523 12 12V11C12 10.4477 11.5523 10 11 10H10Z"
+													fill="#ECEBEB"
+												/>
+												<path
+													d="M21 11C21 10.4477 21.4477 10 22 10H23C23.5523 10 24 10.4477 24 11V12C24 12.5523 23.5523 13 23 13H22C21.4477 13 21 12.5523 21 12V11Z"
+													fill="#ECEBEB"
+												/>
+												<path
+													d="M18 10C17.4477 10 17 10.4477 17 11V12C17 12.5523 17.4477 13 18 13H19C19.5523 13 20 12.5523 20 12V11C20 10.4477 19.5523 10 19 10H18Z"
+													fill="#ECEBEB"
+												/>
+												<path
+													d="M4 14C3.44772 14 3 14.4477 3 15V16C3 16.5523 3.44772 17 4 17H5C5.55228 17 6 16.5523 6 16V15C6 14.4477 5.55228 14 5 14H4Z"
+													fill="#ECEBEB"
+												/>
+												<path
+													d="M23 15C23 14.4477 23.4477 14 24 14H25C25.5523 14 26 14.4477 26 15V16C26 16.5523 25.5523 17 25 17H24C23.4477 17 23 16.5523 23 16V15Z"
+													fill="#ECEBEB"
+												/>
+												<path
+													d="M32 14C31.4477 14 31 14.4477 31 15V16C31 16.5523 31.4477 17 32 17H33C33.5523 17 34 16.5523 34 16V15C34 14.4477 33.5523 14 33 14H32Z"
+													fill="#ECEBEB"
+												/>
+												<path
+													d="M7 15C7 14.4477 7.44772 14 8 14H21C21.5523 14 22 14.4477 22 15V16C22 16.5523 21.5523 17 21 17H8C7.44772 17 7 16.5523 7 16V15Z"
+													fill="#ECEBEB"
+												/>
+												<path
+													d="M28 14C27.4477 14 27 14.4477 27 15V16C27 16.5523 27.4477 17 28 17H29C29.5523 17 30 16.5523 30 16V15C30 14.4477 29.5523 14 29 14H28Z"
+													fill="#ECEBEB"
+												/>
+											</svg>
+
+											<input
+												data-required
+												autocomplete="off"
+												type="text"
+												name="phone"
+												data-error="Введите телефон"
+												placeholder="+7 (***)-***-****"
+												class="input"
+											/>
+										</div>
 									</div>
 								</div>
 							</div>
 							<div class="feedback__checkbox checkbox">
 								<input
-									id="c_1"
-									data-required="checkbox"
-									data-validate
+									id="checkbox"
+									data-required
 									data-error="Дайте согласие"
 									class="checkbox__input"
 									type="checkbox"
 									value="1"
-									name="form[]"
+									name="checkbox"
 								/>
-								<label for="c_1" class="checkbox__label"
+								<label for="checkbox" class="checkbox__label"
 									>Принимаю<span class="checkbox__text">
 										Условия пользования</span
 									></label

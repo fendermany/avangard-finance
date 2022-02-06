@@ -18,7 +18,7 @@
 		overflow-x: auto;
 		overflow-y: hidden;
 		touch-action: auto;
-		padding: 20px;
+		padding: 20px 20px 20px 0;
 		position: absolute;
     width: 100%;
 		@extend %hidescroll;
@@ -54,7 +54,7 @@
 		background: #ffffff;
 		height: 40px;
 		display: flex;
-		justify-topbar: center;
+		justify-content: center;
 		align-items: center;
 		padding: 0 14px;
 		font-size: 16px;

@@ -7,7 +7,7 @@
 // Подключаем слайдер Swiper из node_modules
 // При необходимости подключаем дополнительные модули слайдера, указывая их в {} через запятую
 // Пример: { Navigation, Autoplay }
-import Swiper, { Navigation, Lazy } from 'swiper';
+import Swiper, { Navigation, Pagination, Lazy, EffectFade, Autoplay } from 'swiper';
 /*
 Основниые модули слайдера:
 Navigation, Pagination, Autoplay, 
@@ -65,7 +65,7 @@ function initSliders() {
 			speed: 800,
 			//touchRatio: 0,
 			//simulateTouch: false,
-			loop: true,
+			// loop: true,
 			//preloadImages: false,
 			lazy: true,
 			// Dotts
@@ -125,6 +125,96 @@ function initSliders() {
 				nextEl: '.topbar-cars-next',
 				prevEl: '.topbar-cars-prev',
 			},
+
+			// breakpoints: {
+			// 	0: {
+			// 		spaceBetween: 10,
+			// 	},
+			// 	768: {
+			// 		spaceBetween: 30,
+			// 	},
+			// },
+
+			on: {},
+		});
+	}
+	if (document.querySelector('.enter-mobile__slider')) {
+		new Swiper('.enter-mobile__slider', {
+			// Подключаем модули слайдера
+			// для конкретного случая
+			modules: [Pagination, Navigation, Lazy],
+			/*
+			effect: 'fade',
+			autoplay: {
+				delay: 3000,
+				disableOnInteraction: false,
+			},
+			*/
+			observer: true,
+			observeParents: true,
+			slidesPerView: 'auto',
+			spaceBetween: 500,
+			// autoHeight: true,
+			speed: 800,
+			//touchRatio: 0,
+			//simulateTouch: false,
+			// loop: true,
+			//preloadImages: false,
+			lazy: true,
+			// Dotts
+			pagination: {
+				el: '.enter-mobile__pagination',
+				clickable: true,
+			},
+			// Arrows
+			navigation: {
+				nextEl: '.enter-mobile-button-next',
+				prevEl: '.enter-mobile-button-prev',
+			},
+
+			// breakpoints: {
+			// 	0: {
+			// 		spaceBetween: 10,
+			// 	},
+			// 	768: {
+			// 		spaceBetween: 30,
+			// 	},
+			// },
+
+			on: {},
+		});
+	}
+	if (document.querySelector('.enter-desktop__slider')) {
+		new Swiper('.enter-desktop__slider', {
+			// Подключаем модули слайдера
+			// для конкретного случая
+			modules: [Pagination, Navigation, Lazy, EffectFade, Autoplay],
+			effect: 'fade',
+			autoplay: {
+				delay: 3000,
+				disableOnInteraction: false,
+			},
+			observer: true,
+			observeParents: true,
+			slidesPerView: 1,
+			spaceBetween: 0,
+			// autoHeight: true,
+			speed: 800,
+			//touchRatio: 0,
+			//simulateTouch: false,
+			// loop: true,
+			//preloadImages: false,
+			lazy: true,
+			// Dotts
+			pagination: {
+				el: '.enter-desktop__pagination',
+				clickable: true,
+			},
+			// Arrows
+			// navigation: {
+			// 	nextEl: '.enter-desktop-button-next',
+			// 	prevEl: '.enter-desktop-button-prev',
+			// },
 
 			// breakpoints: {
 			// 	0: {

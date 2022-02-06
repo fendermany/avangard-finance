@@ -2,36 +2,38 @@
 // Снипет (HTML):
 .form {
 	&__row {
+		display: grid;
+		grid-template: 1fr / repeat(auto-fit, minmax(200px, 1fr));
+		@include adaptiveValue('gap', 32, 16);
+		@media (min-width: $mobileSmall) {
+			grid-template: 1fr / repeat(auto-fit, minmax(330px, 1fr));
+		}
+		& + .form__row {
+			@include adaptiveValue('margin-top', 32, 16);
+		}
 	}
 	&__column {
 	}
 	&__line {
+		display: flex;
+		flex-direction: column;
+		position: relative;
+	}
+	/* .form__line-inner */
+	&__line-inner {
+		position: relative;
+		img,
+		svg {
+			position: absolute;
+			right: 12px;
+			@include adaptiveValue("top", 13, 7);
+		}
 	}
 	&__input {
 	}
 	&__button {
 	}
 	&__error {
-	}
-}
-
-.form {
-	/* .form__line */
-	&__line {
-		display: flex;
-		flex-direction: column;
-		position: relative;
-		svg {
-			position: absolute;
-			right: 25px;
-			top: 50%;
-			transform: translateY(-50%);
-		}
-	}
-	&__error {
-		position: absolute;
-		top: -15px;
-		left: 20px;
 		color: red;
 		font-size: 12px;
 	}
@@ -45,11 +47,11 @@
 
 // <INPUTS>
 // Снипет (HTML): inp
-@import "input";
+@import 'input';
 
 // <CHECK>
 // Снипет (HTML): chk
-@import "checkbox";
+@import 'checkbox';
 
 // <RADIO>
 // Снипет (HTML): opt
@@ -57,7 +59,7 @@
 
 // <SELECT>
 // Снипет (HTML): sel
-@import "select";
+@import 'select';
 
 // <RATING>
 // Снипет (HTML): rating
@@ -69,4 +71,4 @@
 
 // <RANGE>
 // Снипет (HTML):
-@import "range";
+@import 'range';
