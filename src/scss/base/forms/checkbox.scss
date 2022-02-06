@@ -12,6 +12,9 @@
 		&:focus + .checkbox__label:before {
 			box-shadow: 0 0 5px #000;
 		}
+		&:checked + .checkbox__label span {
+			color: #fff;
+		}
 		&:checked + .checkbox__label:before {
 			background: url('@img/li.svg') no-repeat center center/contain;
 		}

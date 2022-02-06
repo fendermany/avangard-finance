@@ -2,6 +2,10 @@
 	overflow-x: auto;
 	overflow-y: hidden;
 	width: 100%;
+	@media (min-width:$tablet){
+		 position: relative;
+		 overflow: hidden;
+	}
 	/* .content__topbar */
 	&__topbar {
 	}
