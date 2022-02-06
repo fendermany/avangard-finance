@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="ru">
+	@@include('html/_head.htm',{ "title":"Вход" })
+	<body>
+		<div class="wrapper enter">
+			@@include('html/_header.htm',{})
+
+			<main class="page">
+				<div class="page__container">
+					<div class="enter__mobile enter-mobile">
+						<div class="enter-mobile__slider swiper">
+							<div class="enter-mobile__wrapper swiper-wrapper">
+								<div class="enter-mobile__slide swiper-slide">
+									<div class="enter-mobile__slide-img">
+										<img src="@img/enter/safe-mobile.svg" alt="safe-mobile" />
+									</div>
+									<div class="enter-mobile__slide-title">Безопасность</div>
+									<div class="enter-mobile__slide-descr">
+										Открывайте счет для бизнеса в один клик
+									</div>
+									<button
+										type="button"
+										class="enter-mobile-button-next _icon-arrow-right"
+									>
+										Далее
+									</button>
+								</div>
+								<div class="enter-mobile__slide swiper-slide">
+									<div class="enter-mobile__slide-img">
+										<img src="@img/enter/func-mobile.svg" alt="func-mobile" />
+									</div>
+									<div class="enter-mobile__slide-title">Функциональность</div>
+									<div class="enter-mobile__slide-descr">
+										Открывайте счет для бизнеса в один клик
+									</div>
+									<button
+										type="button"
+										class="enter-mobile-button-next _icon-arrow-right"
+									>
+										Далее
+									</button>
+								</div>
+								<div class="enter-mobile__slide swiper-slide">
+									<div class="enter-mobile__slide-img">
+										<img src="@img/enter/trans-mobile.svg" alt="trans-mobile" />
+									</div>
+									<div class="enter-mobile__slide-title">Прозрачность</div>
+									<div class="enter-mobile__slide-descr">
+										Открывайте счет для бизнеса в один клик
+									</div>
+									<button
+										type="button"
+										class="enter-mobile-button-next _icon-arrow-right"
+									>
+										Далее
+									</button>
+								</div>
+								<div class="enter-mobile__slide swiper-slide">
+									<div class="enter-mobile__slide-img">
+										<img src="@img/enter/enter-mobile.svg" alt="enter-mobile" />
+									</div>
+									<div class="enter-mobile__slide-title">Войдите в аккаунт</div>
+									<div class="enter-mobile__slide-descr">
+										Открывайте счет для бизнеса в один клик
+									</div>
+									<div class="enter-mobile__slide-btns">
+										<button
+											data-popup="#popup__authorization"
+											class="enter-mobile__slide-btn"
+										>
+											Войти
+										</button>
+										<button
+											data-popup="#popup__registration"
+											class="enter-mobile__slide-btn"
+										>
+											Регистрация
+										</button>
+									</div>
+								</div>
+							</div>
+							<div class="enter-mobile__pagination"></div>
+						</div>
+					</div>
+					<div class="enter__desktop enter-desktop">
+						<a class="enter-desktop__logo logo" href="/home.html">
+							<div class="logo__img">
+								<img class="_lazy" data-src="@img/logo.svg" alt="logo" />
+							</div>
+							<span class="logo__text">АВАНГАРД-ФИНАНС</span>
+						</a>
+						<div class="enter-desktop__slider swiper">
+							<div class="enter-desktop__wrapper swiper-wrapper">
+								<div class="enter-desktop__slide swiper-slide">
+									<div class="enter-desktop__slide-img">
+										<img src="@img/enter/safe-pc.svg" alt="safe-pc" />
+									</div>
+									<div class="enter-desktop__slide-title">Безопасность</div>
+									<div class="enter-desktop__slide-descr">
+										АВАНГАРД-ФИНАНС защищён уникальной комбинацией из 34
+										символов, дополнительно доступна защита паролем и
+										двухфакторная аутентификация
+									</div>
+								</div>
+								<div class="enter-desktop__slide swiper-slide">
+									<div class="enter-desktop__slide-img">
+										<img src="@img/enter/func-pc.svg" alt="func-pc" />
+									</div>
+									<div class="enter-desktop__slide-title">Функциональность</div>
+									<div class="enter-desktop__slide-descr">
+										АВАНГАРД-ФИНАНС позволяет открыть счет для бизнеса в один
+										клик, по своему функционалу сервис не имеет аналогов в
+										России и мире
+									</div>
+								</div>
+								<div class="enter-desktop__slide swiper-slide">
+									<div class="enter-desktop__slide-img">
+										<img src="@img/enter/trans-pc.svg" alt="trans-pc" />
+									</div>
+									<div class="enter-desktop__slide-title">Прозрачность</div>
+									<div class="enter-desktop__slide-descr">
+										Мы стремимся сделать удобный и доступный сервис, не взимая
+										никаких скрытых сборов и комиссий
+									</div>
+								</div>
+							</div>
+							<div class="enter-desktop__pagination"></div>
+						</div>
+						<div class="enter-desktop__btns">
+							<button
+								data-popup="#popup__authorization"
+								type="button"
+								class="enter-desktop__btn"
+							>
+								Войти
+							</button>
+							<button
+								data-popup="#popup__registration"
+								type="button"
+								class="enter-desktop__btn"
+							>
+								Регистрация
+							</button>
+						</div>
+					</div>
+				</div>
+			</main>
+		</div>
+		@@include('html/_popup.htm',{}) @@include('html/_js.htm',{})
+	</body>
+</html>
